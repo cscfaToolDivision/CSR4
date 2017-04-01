@@ -1,0 +1,110 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\PropertyMetadata\\ObjectPropertyMetadataInterface",
+    "line": 29,
+    "short_desc": "ObjectPropertyMetadataInterface.php",
+    "long_desc": "This interface is used to define the base method of the ObjectPropertyMetadata",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Metadata"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\PropertyMetadata",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/PropertyMetadata\/ObjectPropertyMetadataInterface.php",
+    "relative_file": null,
+    "hash": "9492df03eaf9079707a60088411dc706da9b01c2",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getMappedTransformer": {
+            "name": "getMappedTransformer",
+            "line": 39,
+            "short_desc": "Get mapped transformer",
+            "long_desc": "This method return the data transformer of the property to apply before\nproperty mapping",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getMappingGroup": {
+            "name": "getMappingGroup",
+            "line": 48,
+            "short_desc": "Get mapping group",
+            "long_desc": "This method return the mapping group of the property",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getTargetProperty": {
+            "name": "getTargetProperty",
+            "line": 57,
+            "short_desc": "Get target property",
+            "long_desc": "This method return the targeted property of the property metadata",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}
