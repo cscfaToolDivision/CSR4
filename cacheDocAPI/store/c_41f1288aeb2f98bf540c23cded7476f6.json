@@ -1,0 +1,160 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\Loader\\MetadataLoaderInterface",
+    "line": 31,
+    "short_desc": "MetadataLoaderInterface.php",
+    "long_desc": "This interface define the base methods of the MetadataLoader",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Metadata"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\Loader",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/MetadataLoaderInterface.php",
+    "relative_file": null,
+    "hash": "ce330a4f86a294743d82049133328b043c960224",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": {
+        "MetadataFormatParserInterface": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\MetadataFormatParserInterface"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "addParser": {
+            "name": "addParser",
+            "line": 42,
+            "short_desc": "Add parser",
+            "long_desc": "This method is used to add a new metadata format parser to the set of parser",
+            "hint": [
+                [
+                    "CSDT\\CSR4\\Metadata\\Loader\\$this",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "parser": {
+                    "name": "parser",
+                    "line": 42,
+                    "short_desc": "The parser to add",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR4\\Metadata\\Loader\\Parser\\MetadataFormatParserInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR4",
+                            "Metadata",
+                            "Loader",
+                            "Parser",
+                            "MetadataFormatParserInterface"
+                        ],
+                        "attributes": {
+                            "startLine": 42,
+                            "endLine": 42
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "load": {
+            "name": "load",
+            "line": 54,
+            "short_desc": "Load",
+            "long_desc": "This method is used to load a metadata and store it into the metadata\nconfiguration",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "metadataElement": {
+                    "name": "metadataElement",
+                    "line": 54,
+                    "short_desc": "The metadata to load",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getMetadata": {
+            "name": "getMetadata",
+            "line": 63,
+            "short_desc": "Get metadata",
+            "long_desc": "This method return the loaded metadata",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

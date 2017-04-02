@@ -30,6 +30,7 @@
 	],
 	"minimum-stability" : "stable",
 	"require" : {
-		"cscfa_tool_division/csr3-dto" : "^1.0@stable"
+		"cscfa_tool_division/csr3-dto" : "^1.0@stable",
+		"symfony/options-resolver" : "^3.2@stable"
 	}
 }

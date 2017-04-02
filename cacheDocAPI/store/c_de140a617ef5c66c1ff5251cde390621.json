@@ -1,0 +1,52 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\MetadataFormatParserInterface",
+    "line": 29,
+    "short_desc": "MetadataFormatParserInterface.php",
+    "long_desc": "This interface define the base methods of the MetadataFormatParserInterface",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Metadata"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\Loader\\Parser",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/Parser\/MetadataFormatParserInterface.php",
+    "relative_file": null,
+    "hash": "280a831d0b85986f0730da1db9fd40c1cd98dac8",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}
