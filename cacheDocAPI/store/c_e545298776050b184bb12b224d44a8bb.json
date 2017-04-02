@@ -1,0 +1,128 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Abstracts\\AbstractObjectMetadata",
+    "line": 32,
+    "short_desc": "AbstractObjectMetadata.php",
+    "long_desc": "This class is used as parent for the ObjectMetadata objects",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Metadata"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedMetadata"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Abstracts",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/Abstracts\/AbstractObjectMetadata.php",
+    "relative_file": null,
+    "hash": "e5ea3dd5c0eaff44dbd4b0198392d050dcc2a6f8",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "ObjectMetadataInterface": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\ObjectMetadataInterface",
+        "ObjectMetadataTrait": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Traits\\ObjectMetadataTrait"
+    },
+    "errors": [],
+    "interfaces": {
+        "CSDT\\CSR4\\Metadata\\ObjectMetadata\\ObjectMetadataInterface": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\ObjectMetadataInterface"
+    },
+    "traits": {
+        "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Traits\\ObjectMetadataTrait": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Traits\\ObjectMetadataTrait"
+    },
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 84,
+            "short_desc": "Construct",
+            "long_desc": "The default AbstractObjectMetadata constructor",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "mappedClass": {
+                    "name": "mappedClass",
+                    "line": 85,
+                    "short_desc": "The mapped class name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "metadataProperties": {
+                    "name": "metadataProperties",
+                    "line": 86,
+                    "short_desc": "The metadata properties of the DTO",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "array",
+                    "default": "[]",
+                    "is_by_ref": false
+                },
+                "objectFactory": {
+                    "name": "objectFactory",
+                    "line": 87,
+                    "short_desc": "The mapped object factory",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": "null",
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}
