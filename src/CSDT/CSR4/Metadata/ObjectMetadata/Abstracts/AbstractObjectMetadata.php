@@ -68,6 +68,15 @@ abstract class AbstractObjectMetadata implements ObjectMetadataInterface
      */
     private $objectFactory;
 
+    /**
+     * Dto mapper
+     *
+     * This property store the dto mapper to be used for mapping
+     *
+     * @var string
+     */
+    private $dtoMapper;
+
     use ObjectMetadataTrait;
 
     /**
@@ -84,10 +93,12 @@ abstract class AbstractObjectMetadata implements ObjectMetadataInterface
     public function __construct(
         string $mappedClass,
         array $metadataProperties = [],
-        string $objectFactory = null
+        string $objectFactory = null,
+        string $dtoMapper = null
     ) {
         $this->metadataProperties = $metadataProperties;
         $this->mappedClass = $mappedClass;
         $this->objectFactory = $objectFactory;
+        $this->dtoMapper = $dtoMapper;
     }
 }

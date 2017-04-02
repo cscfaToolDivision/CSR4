@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Abstracts",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/Abstracts\/AbstractObjectMetadata.php",
     "relative_file": null,
-    "hash": "e5ea3dd5c0eaff44dbd4b0198392d050dcc2a6f8",
+    "hash": "a82e3af757e6700364da1fb1a256996c5665c351",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -57,7 +57,7 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 84,
+            "line": 93,
             "short_desc": "Construct",
             "long_desc": "The default AbstractObjectMetadata constructor",
             "hint": [
@@ -71,12 +71,14 @@
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
-            "errors": [],
+            "errors": [
+                "\"4\" @param tags are expected but only \"3\" found"
+            ],
             "parameters": {
                 "mappedClass": {
                     "name": "mappedClass",
-                    "line": 85,
-                    "short_desc": "The mapped class name",
+                    "line": 94,
+                    "short_desc": null,
                     "long_desc": null,
                     "hint": [
                         [
@@ -91,8 +93,8 @@
                 },
                 "metadataProperties": {
                     "name": "metadataProperties",
-                    "line": 86,
-                    "short_desc": "The metadata properties of the DTO",
+                    "line": 95,
+                    "short_desc": null,
                     "long_desc": null,
                     "hint": [
                         [
@@ -107,8 +109,24 @@
                 },
                 "objectFactory": {
                     "name": "objectFactory",
-                    "line": 87,
-                    "short_desc": "The mapped object factory",
+                    "line": 96,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "dtoMapper": {
+                    "name": "dtoMapper",
+                    "line": 97,
+                    "short_desc": null,
                     "long_desc": null,
                     "hint": [
                         [

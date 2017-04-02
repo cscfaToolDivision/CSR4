@@ -46,6 +46,7 @@ class ObjectMetadataTest extends TestCase
         $mappedClass = 'mappedClass';
         $objectFactory = 'objectFactory';
         $properties = array_values($this->getProperties());
+        $dtoMapper = 'dtoMapper';
 
 
         $instance = new ObjectMetadata($mappedClass);
@@ -53,16 +54,57 @@ class ObjectMetadataTest extends TestCase
         $this->assertMetadataProperties($instance, []);
         $this->assertObjectFactory($instance);
         $this->assertTraversingProperty($instance, 0);
+        $this->assertDtoMapper($instance);
+
+        $this->assertEmpty($instance->getByMappedProperty('test'));
+        $this->assertNull($instance->getDtoMapper());
+        $this->assertEquals($mappedClass, $instance->getMappedClass());
+        $this->assertNull($instance->getObjectFactory());
+        $this->assertEmpty($instance->getObjectProperties());
 
         $instance = new ObjectMetadata($mappedClass, $properties);
         $this->assertMappedClass($instance, $mappedClass);
         $this->assertMetadataProperties($instance, $properties);
         $this->assertObjectFactory($instance);
+        $this->assertDtoMapper($instance);
 
         $instance = new ObjectMetadata($mappedClass, $properties, $objectFactory);
         $this->assertMappedClass($instance, $mappedClass);
         $this->assertMetadataProperties($instance, $properties);
         $this->assertObjectFactory($instance, $objectFactory);
+        $this->assertDtoMapper($instance);
+
+        $instance = new ObjectMetadata(
+            $mappedClass,
+            $properties,
+            $objectFactory,
+            $dtoMapper
+        );
+        $this->assertMappedClass($instance, $mappedClass);
+        $this->assertMetadataProperties($instance, $properties);
+        $this->assertObjectFactory($instance, $objectFactory);
+        $this->assertDtoMapper($instance, $dtoMapper);
+    }
+
+    /**
+     * Test getDtoMapper
+     *
+     * This method validate the getDtoMapper method logic of the ObjectMetadata
+     * class
+     *
+     * @return void
+     */
+    public function testGetDtoMapper()
+    {
+        $reflexClass = new \ReflectionClass(ObjectMetadata::class);
+        $instance = $reflexClass->newInstanceWithoutConstructor();
+
+        $value = 'dtoMapper';
+        $mappedClass = $this->getReflexDtoMapper();
+        $mappedClass->setAccessible(true);
+        $mappedClass->setValue($instance, $value);
+
+        $this->assertEquals($value, $instance->getDtoMapper());
     }
 
     /**
@@ -184,6 +226,25 @@ class ObjectMetadataTest extends TestCase
     }
 
     /**
+     * Assert dtoMapper
+     *
+     * This method assert the dtoMapper value property
+     *
+     * @param ObjectMetadata $instance The current instance
+     * @param string         $value    The expected value
+     *
+     * @return void
+     */
+    private function assertDtoMapper(
+        ObjectMetadata $instance,
+        string $value = null
+    ) {
+        $dtoMapper = $this->getReflexDtoMapper();
+        $dtoMapper->setAccessible(true);
+        $this->assertEquals($value, $dtoMapper->getValue($instance));
+    }
+
+    /**
      * Assert traversingProperty
      *
      * This method assert the traversingProperty value property
@@ -251,6 +312,18 @@ class ObjectMetadataTest extends TestCase
         $mappedClass = $this->getReflexMappedClass();
         $mappedClass->setAccessible(true);
         $this->assertEquals($value, $mappedClass->getValue($instance));
+    }
+
+    /**
+     * Get relfex dtoMapper
+     *
+     * This method return the dtoMapper reflexion property
+     *
+     * @return \ReflectionProperty
+     */
+    private function getReflexDtoMapper() : \ReflectionProperty
+    {
+        return $this->getReflex('dtoMapper');
     }
 
     /**

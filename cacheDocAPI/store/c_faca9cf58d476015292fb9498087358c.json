@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Traits",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/Traits\/ObjectMetadataTrait.php",
     "relative_file": null,
-    "hash": "a103d407d78db39c58703b96f38368b31d4fd5b6",
+    "hash": "2f212cbc2d17b0992112d91a511b05ce276dc065",
     "parent": null,
     "modifiers": null,
     "is_trait": true,
@@ -149,12 +149,37 @@
                 }
             },
             "errors": []
+        },
+        "dtoMapperContainer": {
+            "name": "dtoMapperContainer",
+            "line": 79,
+            "short_desc": "Dto mapper container",
+            "long_desc": "This property store the dto mapper property name",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "dtoMapper",
+                "attributes": {
+                    "startLine": 79,
+                    "endLine": 79,
+                    "kind": 1
+                }
+            },
+            "errors": []
         }
     },
     "methods": {
         "getMappedClass": {
             "name": "getMappedClass",
-            "line": 79,
+            "line": 88,
             "short_desc": "Get mapped class",
             "long_desc": "This method return the DTO mapped class defined by the metadata",
             "hint": [
@@ -173,7 +198,7 @@
         },
         "getByMappedProperty": {
             "name": "getByMappedProperty",
-            "line": 93,
+            "line": 102,
             "short_desc": "Get by mapped property",
             "long_desc": "This method return a property metadata by a mapped property",
             "hint": [
@@ -191,7 +216,7 @@
             "parameters": {
                 "mappedProperty": {
                     "name": "mappedProperty",
-                    "line": 93,
+                    "line": 102,
                     "short_desc": "The mapped property name",
                     "long_desc": null,
                     "hint": [
@@ -209,7 +234,7 @@
         },
         "getObjectProperties": {
             "name": "getObjectProperties",
-            "line": 105,
+            "line": 114,
             "short_desc": "Get object properties",
             "long_desc": "This method return the properties metadata as array",
             "hint": [
@@ -228,12 +253,39 @@
         },
         "getObjectFactory": {
             "name": "getObjectFactory",
-            "line": 117,
+            "line": 126,
             "short_desc": "Get object factory",
             "long_desc": "This method return the mapped object factory",
             "hint": [
                 [
                     "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getDtoMapper": {
+            "name": "getDtoMapper",
+            "line": 138,
+            "short_desc": "Get dto mapper",
+            "long_desc": "This method return the dto mapper to be user on mapping",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
                     false
                 ]
             ],
@@ -247,7 +299,7 @@
         },
         "current": {
             "name": "current",
-            "line": 129,
+            "line": 150,
             "short_desc": "Current",
             "long_desc": "This method return the current iterated value",
             "hint": [
@@ -266,7 +318,7 @@
         },
         "next": {
             "name": "next",
-            "line": 141,
+            "line": 162,
             "short_desc": "Next",
             "long_desc": "This method advance the internal pointer by one step",
             "hint": [
@@ -285,7 +337,7 @@
         },
         "key": {
             "name": "key",
-            "line": 153,
+            "line": 174,
             "short_desc": "Key",
             "long_desc": "This method return the current iterated key",
             "hint": [
@@ -304,7 +356,7 @@
         },
         "valid": {
             "name": "valid",
-            "line": 167,
+            "line": 188,
             "short_desc": "Valid",
             "long_desc": "This method validate the current internal position existence",
             "hint": [
@@ -323,7 +375,7 @@
         },
         "rewind": {
             "name": "rewind",
-            "line": 183,
+            "line": 204,
             "short_desc": "Rewind",
             "long_desc": "This method reinitialize the internal position",
             "hint": [

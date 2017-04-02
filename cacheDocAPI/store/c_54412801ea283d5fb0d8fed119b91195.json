@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\PropertyMetadata",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/PropertyMetadata\/ObjectPropertyMetadataInterface.php",
     "relative_file": null,
-    "hash": "9492df03eaf9079707a60088411dc706da9b01c2",
+    "hash": "4714220443eb531990c0dbf0441406813b35ad9b",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -56,6 +56,10 @@
             "hint": [
                 [
                     "string",
+                    false
+                ],
+                [
+                    "null",
                     false
                 ]
             ],
