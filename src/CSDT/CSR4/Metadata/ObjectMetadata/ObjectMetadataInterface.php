@@ -65,8 +65,7 @@ interface ObjectMetadataInterface extends \Iterator
      *
      * @param string $mappedProperty The mapped property name
      *
-     * @return ObjectPropertyMetadataInterface
+     * @return ObjectPropertyMetadataInterface|null
      */
-    public function getByMappedProperty(string $mappedProperty)
-        : ObjectPropertyMetadataInterface ;
+    public function getByMappedProperty(string $mappedProperty);
 }
