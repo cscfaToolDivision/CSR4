@@ -62,9 +62,9 @@ trait ObjectPropertyMetadataTrait
      * This method return the data transformer of the property to apply before
      * property mapping
      *
-     * @return string
+     * @return string|null
      */
-    public function getMappedTransformer() : string
+    public function getMappedTransformer()
     {
         return $this->{$this->transformerContainer};
     }

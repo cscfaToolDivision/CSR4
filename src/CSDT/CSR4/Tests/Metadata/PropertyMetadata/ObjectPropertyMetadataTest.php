@@ -51,6 +51,10 @@ class ObjectPropertyMetadataTest extends TestCase
         $this->assertMappingGroup($instance);
         $this->assertDataTransformer($instance);
 
+        $this->assertNull($instance->getMappedTransformer());
+        $this->assertTrue(is_array($instance->getMappingGroup()));
+        $this->assertEquals($targetProperty, $instance->getTargetProperty());
+
         $instance = new ObjectPropertyMetadata($targetProperty, $mappingGroup);
         $this->assertTargetProperty($instance, $targetProperty);
         $this->assertMappingGroup($instance, $mappingGroup);

@@ -146,6 +146,14 @@
                 <td class="last">Object factory container</td>
                 <td><small>from&nbsp;<a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#property_objectFactoryContainer"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a></small></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_dtoMapperContainer">
+                                        protected                                        string
+                </td>
+                <td>$dtoMapperContainer</td>
+                <td class="last">Dto mapper container</td>
+                <td><small>from&nbsp;<a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#property_dtoMapperContainer"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a></small></td>
+            </tr>
             </table>
 
     
@@ -191,6 +199,16 @@
         
                                             <p>Get object factory</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getObjectFactory"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDtoMapper">getDtoMapper</a>()
+        
+                                            <p>Get dto mapper</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getDtoMapper"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -247,7 +265,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $mappedClass, array $metadataProperties = [], string $objectFactory = null)
+                    <a href="#method___construct">__construct</a>(string $mappedClass, array $metadataProperties = [], string $objectFactory = null, string $dtoMapper = null)
         
                                             <p>Construct</p>                </div>
                 <div class="col-md-2"></div>
@@ -260,7 +278,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getMappedClass">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getMappedClass"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 79</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getMappedClass"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 88</div>
         <code>                    string
     <strong>getMappedClass</strong>()
         </code>
@@ -290,7 +308,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getByMappedProperty">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getByMappedProperty"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 93</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getByMappedProperty"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 102</div>
         <code>                    <a href="../../../../../CSDT/CSR4/Metadata/PropertyMetadata/ObjectPropertyMetadataInterface.html"><abbr title="CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface">ObjectPropertyMetadataInterface</abbr></a>
     <strong>getByMappedProperty</strong>(string $mappedProperty)
         </code>
@@ -330,7 +348,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getObjectProperties">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getObjectProperties"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 111</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getObjectProperties"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 114</div>
         <code>                    array
     <strong>getObjectProperties</strong>()
         </code>
@@ -360,7 +378,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getObjectFactory">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getObjectFactory"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 123</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getObjectFactory"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 126</div>
         <code>                    string
     <strong>getObjectFactory</strong>()
         </code>
@@ -389,8 +407,38 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getDtoMapper">
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_getDtoMapper"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 138</div>
+        <code>                    string
+    <strong>getDtoMapper</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get dto mapper</p>                    <p>This method return the dto mapper to be user on mapping</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_current"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 135</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_current"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 150</div>
         <code>                    <a href="../../../../../CSDT/CSR4/Metadata/PropertyMetadata/ObjectPropertyMetadataInterface.html"><abbr title="CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface">ObjectPropertyMetadataInterface</abbr></a>
     <strong>current</strong>()
         </code>
@@ -420,7 +468,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_next"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 147</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_next"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 162</div>
         <code>                    void
     <strong>next</strong>()
         </code>
@@ -450,7 +498,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_key">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_key"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 159</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_key"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 174</div>
         <code>                    string
     <strong>key</strong>()
         </code>
@@ -480,7 +528,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_valid">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_valid"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 173</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_valid"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 188</div>
         <code>                    bool
     <strong>valid</strong>()
         </code>
@@ -510,7 +558,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_rewind"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 189</div>
+        <div class="location">in <a href="../../../../../CSDT/CSR4/Metadata/ObjectMetadata/Traits/ObjectMetadataTrait.html#method_rewind"><abbr title="CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait">ObjectMetadataTrait</abbr></a> at         line 204</div>
         <code>                    void
     <strong>rewind</strong>()
         </code>
@@ -540,9 +588,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 84</div>
+        <div class="location">at         line 93</div>
         <code>                    void
-    <strong>__construct</strong>(string $mappedClass, array $metadataProperties = [], string $objectFactory = null)
+    <strong>__construct</strong>(string $mappedClass, array $metadataProperties = [], string $objectFactory = null, string $dtoMapper = null)
         </code>
     </h3>
     <div class="details">
@@ -558,17 +606,22 @@
                     <tr>
                 <td>string</td>
                 <td>$mappedClass</td>
-                <td>The mapped class name</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$metadataProperties</td>
-                <td>The metadata properties of the DTO</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$objectFactory</td>
-                <td>The mapped object factory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dtoMapper</td>
+                <td></td>
             </tr>
             </table>
 

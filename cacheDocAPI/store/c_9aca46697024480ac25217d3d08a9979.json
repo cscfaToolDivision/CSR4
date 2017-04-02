@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/ObjectMetadataInterface.php",
     "relative_file": null,
-    "hash": "ab3551081a8c9e2181fb3f13f8a8f8bc113f8a27",
+    "hash": "3cf030555f13f7e37da52d0fb65721899cc36e02",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -99,6 +99,10 @@
                 [
                     "string",
                     false
+                ],
+                [
+                    "null",
+                    false
                 ]
             ],
             "hint_desc": "",
@@ -148,6 +152,29 @@
                     "is_by_ref": false
                 }
             }
+        },
+        "getDtoMapper": {
+            "name": "getDtoMapper",
+            "line": 79,
+            "short_desc": "Get dto mapper",
+            "long_desc": "This method return the dto mapper to be user on mapping",
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
         }
     },
     "constants": []

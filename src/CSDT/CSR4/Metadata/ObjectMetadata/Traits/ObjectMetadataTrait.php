@@ -70,6 +70,15 @@ trait ObjectMetadataTrait
     protected $objectFactoryContainer = 'objectFactory';
 
     /**
+     * Dto mapper container
+     *
+     * This property store the dto mapper property name
+     *
+     * @var string
+     */
+    protected $dtoMapperContainer = 'dtoMapper';
+
+    /**
      * Get mapped class
      *
      * This method return the DTO mapped class defined by the metadata
@@ -112,11 +121,23 @@ trait ObjectMetadataTrait
      *
      * This method return the mapped object factory
      *
-     * @return string
+     * @return string|null
      */
-    public function getObjectFactory() : string
+    public function getObjectFactory()
     {
         return $this->{$this->objectFactoryContainer};
+    }
+
+    /**
+     * Get dto mapper
+     *
+     * This method return the dto mapper to be user on mapping
+     *
+     * @return string|null
+     */
+    public function getDtoMapper()
+    {
+        return $this->{$this->dtoMapperContainer};
     }
 
     /**

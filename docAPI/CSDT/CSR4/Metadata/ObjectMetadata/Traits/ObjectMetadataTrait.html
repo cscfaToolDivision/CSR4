@@ -131,6 +131,14 @@
                 <td class="last">Object factory container</td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_dtoMapperContainer">
+                                        protected                                        string
+                </td>
+                <td>$dtoMapperContainer</td>
+                <td class="last">Dto mapper container</td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -169,12 +177,22 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    string|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getObjectFactory">getObjectFactory</a>()
         
                                             <p>Get object factory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDtoMapper">getDtoMapper</a>()
+        
+                                            <p>Get dto mapper</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -235,7 +253,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getMappedClass">
-        <div class="location">at         line 79</div>
+        <div class="location">at         line 88</div>
         <code>                    string
     <strong>getMappedClass</strong>()
         </code>
@@ -265,7 +283,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getByMappedProperty">
-        <div class="location">at         line 93</div>
+        <div class="location">at         line 102</div>
         <code>                    <a href="../../../../../CSDT/CSR4/Metadata/PropertyMetadata/ObjectPropertyMetadataInterface.html"><abbr title="CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface">ObjectPropertyMetadataInterface</abbr></a>
     <strong>getByMappedProperty</strong>(string $mappedProperty)
         </code>
@@ -305,7 +323,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getObjectProperties">
-        <div class="location">at         line 105</div>
+        <div class="location">at         line 114</div>
         <code>                    array
     <strong>getObjectProperties</strong>()
         </code>
@@ -335,8 +353,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getObjectFactory">
-        <div class="location">at         line 117</div>
-        <code>                    string
+        <div class="location">at         line 126</div>
+        <code>                    string|null
     <strong>getObjectFactory</strong>()
         </code>
     </h3>
@@ -352,7 +370,37 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDtoMapper">
+        <div class="location">at         line 138</div>
+        <code>                    string|null
+    <strong>getDtoMapper</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get dto mapper</p>                    <p>This method return the dto mapper to be user on mapping</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
             <td></td>
         </tr>
     </table>
@@ -365,7 +413,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">at         line 129</div>
+        <div class="location">at         line 150</div>
         <code>                    <a href="../../../../../CSDT/CSR4/Metadata/PropertyMetadata/ObjectPropertyMetadataInterface.html"><abbr title="CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface">ObjectPropertyMetadataInterface</abbr></a>
     <strong>current</strong>()
         </code>
@@ -395,7 +443,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">at         line 141</div>
+        <div class="location">at         line 162</div>
         <code>                    void
     <strong>next</strong>()
         </code>
@@ -425,7 +473,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_key">
-        <div class="location">at         line 153</div>
+        <div class="location">at         line 174</div>
         <code>                    string
     <strong>key</strong>()
         </code>
@@ -455,7 +503,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_valid">
-        <div class="location">at         line 167</div>
+        <div class="location">at         line 188</div>
         <code>                    bool
     <strong>valid</strong>()
         </code>
@@ -485,7 +533,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">at         line 183</div>
+        <div class="location">at         line 204</div>
         <code>                    void
     <strong>rewind</strong>()
         </code>

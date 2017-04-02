@@ -54,9 +54,9 @@ interface ObjectMetadataInterface extends \Iterator
      *
      * This method return the mapped object factory
      *
-     * @return string
+     * @return string|null
      */
-    public function getObjectFactory() : string ;
+    public function getObjectFactory();
 
     /**
      * Get by mapped property
@@ -68,4 +68,13 @@ interface ObjectMetadataInterface extends \Iterator
      * @return ObjectPropertyMetadataInterface|null
      */
     public function getByMappedProperty(string $mappedProperty);
+
+    /**
+     * Get dto mapper
+     *
+     * This method return the dto mapper to be user on mapping
+     *
+     * @return string|null
+     */
+    public function getDtoMapper();
 }
