@@ -1,0 +1,54 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\PropertyMetadata\\ObjectPropertyMetadata",
+    "line": 31,
+    "short_desc": "ObjectPropertyMetadata.php",
+    "long_desc": "This class is used as default object property metadata",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Metadata"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\PropertyMetadata",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/PropertyMetadata\/ObjectPropertyMetadata.php",
+    "relative_file": null,
+    "hash": "869c16d43ee541824472a2e0837dae669fa18213",
+    "parent": "CSDT\\CSR4\\Metadata\\PropertyMetadata\\Abstracts\\AbstractObjectPropertyMetadata",
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "AbstractObjectPropertyMetadata": "CSDT\\CSR4\\Metadata\\PropertyMetadata\\Abstracts\\AbstractObjectPropertyMetadata"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

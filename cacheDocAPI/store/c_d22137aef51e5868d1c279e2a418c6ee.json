@@ -1,0 +1,186 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\PropertyMetadata\\Traits\\ObjectPropertyMetadataTrait",
+    "line": 29,
+    "short_desc": "ObjectPropertyMetadataTrait.php",
+    "long_desc": "This trait is used to implement the ObjectPropertyMetadata base logic",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Metadata"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedMetadata"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\PropertyMetadata\\Traits",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/PropertyMetadata\/Traits\/ObjectPropertyMetadataTrait.php",
+    "relative_file": null,
+    "hash": "f548253dd786f594f35a3f910daebd5f6f6c23ad",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": true,
+    "is_interface": false,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "transformerContainer": {
+            "name": "transformerContainer",
+            "line": 39,
+            "short_desc": "Transformer container",
+            "long_desc": "This property store the transformer container property name",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "dataTransformer",
+                "attributes": {
+                    "startLine": 39,
+                    "endLine": 39,
+                    "kind": 1
+                }
+            },
+            "errors": []
+        },
+        "groupContainer": {
+            "name": "groupContainer",
+            "line": 48,
+            "short_desc": "Group container",
+            "long_desc": "This property store the group container property name",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "mappingGroup",
+                "attributes": {
+                    "startLine": 48,
+                    "endLine": 48,
+                    "kind": 1
+                }
+            },
+            "errors": []
+        },
+        "targetContainer": {
+            "name": "targetContainer",
+            "line": 57,
+            "short_desc": "Target container",
+            "long_desc": "This property store the target property container property name",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "targetProperty",
+                "attributes": {
+                    "startLine": 57,
+                    "endLine": 57,
+                    "kind": 1
+                }
+            },
+            "errors": []
+        }
+    },
+    "methods": {
+        "getMappedTransformer": {
+            "name": "getMappedTransformer",
+            "line": 67,
+            "short_desc": "Get mapped transformer",
+            "long_desc": "This method return the data transformer of the property to apply before\nproperty mapping",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getMappingGroup": {
+            "name": "getMappingGroup",
+            "line": 79,
+            "short_desc": "Get mapping group",
+            "long_desc": "This method return the mapping group of the property",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getTargetProperty": {
+            "name": "getTargetProperty",
+            "line": 91,
+            "short_desc": "Get target property",
+            "long_desc": "This method return the targeted property of the property metadata",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}
