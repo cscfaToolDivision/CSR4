@@ -37,14 +37,14 @@
     "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Traits",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/Traits\/ObjectMetadataTrait.php",
     "relative_file": null,
-    "hash": "0b7ad28b91b29d7f029f33dda4cb8f1ba9d3257f",
+    "hash": "a103d407d78db39c58703b96f38368b31d4fd5b6",
     "parent": null,
     "modifiers": null,
     "is_trait": true,
     "is_interface": false,
     "aliases": {
         "ObjectPropertyMetadataInterface": "CSDT\\CSR4\\Metadata\\PropertyMetadata\\ObjectPropertyMetadataInterface",
-        "MappedPropertyFilter": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Utils\\MappedPropertyFilter"
+        "MappedPropertyFilter": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Filter\\MappedPropertyFilter"
     },
     "errors": [],
     "interfaces": [],

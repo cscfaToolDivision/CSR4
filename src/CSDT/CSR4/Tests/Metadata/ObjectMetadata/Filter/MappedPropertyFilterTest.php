@@ -13,10 +13,10 @@
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-namespace CSDT\CSR4\Tests\Metadata\ObjectMetadata\Utils;
+namespace CSDT\CSR4\Tests\Metadata\ObjectMetadata\Filter;
 
 use PHPUnit\Framework\TestCase;
-use CSDT\CSR4\Metadata\ObjectMetadata\Utils\MappedPropertyFilter;
+use CSDT\CSR4\Metadata\ObjectMetadata\Filter\MappedPropertyFilter;
 use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface;
 
 /**
