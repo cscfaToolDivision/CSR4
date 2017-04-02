@@ -13,7 +13,7 @@
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-namespace CSDT\CSR4\Metadata\ObjectMetadata\Utils;
+namespace CSDT\CSR4\Metadata\ObjectMetadata\Filter;
 
 use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface;
 

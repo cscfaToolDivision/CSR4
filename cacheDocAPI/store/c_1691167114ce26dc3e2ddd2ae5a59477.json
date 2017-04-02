@@ -1,5 +1,5 @@
 {
-    "name": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Utils\\MappedPropertyFilter",
+    "name": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Filter\\MappedPropertyFilter",
     "line": 32,
     "short_desc": "MappedPropertyFilter.php",
     "long_desc": "This class is tool used to filter the ObjectPropertyMetadata by their mapped\nproperty",
@@ -34,10 +34,10 @@
             ]
         ]
     },
-    "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Utils",
-    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/Utils\/MappedPropertyFilter.php",
+    "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Filter",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/Filter\/MappedPropertyFilter.php",
     "relative_file": null,
-    "hash": "74c95109a318155c2b2b5d64efbd1d89fa903f21",
+    "hash": "61fedea433a753bdebeac6f05038f37a78e0fcae",
     "parent": null,
     "modifiers": null,
     "is_trait": false,

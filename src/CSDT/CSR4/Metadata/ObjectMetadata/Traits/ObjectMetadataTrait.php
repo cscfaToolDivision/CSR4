@@ -16,7 +16,7 @@
 namespace CSDT\CSR4\Metadata\ObjectMetadata\Traits;
 
 use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface;
-use CSDT\CSR4\Metadata\ObjectMetadata\Utils\MappedPropertyFilter;
+use CSDT\CSR4\Metadata\ObjectMetadata\Filter\MappedPropertyFilter;
 
 /**
  * ObjectMetadataTrait.php
