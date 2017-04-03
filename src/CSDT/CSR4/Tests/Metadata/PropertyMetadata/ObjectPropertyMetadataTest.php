@@ -232,6 +232,8 @@ class ObjectPropertyMetadataTest extends TestCase
      * This method return an accessible reflection property of the given
      * property name
      *
+     * @param string $property The property name for reflection generation
+     *
      * @return \ReflectionProperty
      */
     private function getReflex(string $property)

@@ -1,0 +1,94 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\Factory\\ResolverFactory",
+    "line": 33,
+    "short_desc": "ResolverFactory.php",
+    "long_desc": "This class is used to create the options resolver in charge of the\nPhpMetadataParser option resolving",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Factory"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\Factory",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/Parser\/php\/Factory\/ResolverFactory.php",
+    "relative_file": null,
+    "hash": "a679a06880abcd7a9fc081f41d38405f9f0b3ef0",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "OptionsResolver": "Symfony\\Component\\OptionsResolver\\OptionsResolver",
+        "GroupValidator": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\Validator\\GroupValidator"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getPropertyOptionResolver": {
+            "name": "getPropertyOptionResolver",
+            "line": 43,
+            "short_desc": "Get property option resolver",
+            "long_desc": "This method create a new property option resolver",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\OptionsResolver\\OptionsResolver",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getObjectOptionResolver": {
+            "name": "getObjectOptionResolver",
+            "line": 70,
+            "short_desc": "Get object option resolver",
+            "long_desc": "This method create a new object option resolver",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\OptionsResolver\\OptionsResolver",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

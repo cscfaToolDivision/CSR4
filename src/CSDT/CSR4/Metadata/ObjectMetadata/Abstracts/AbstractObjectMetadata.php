@@ -87,6 +87,7 @@ abstract class AbstractObjectMetadata implements ObjectMetadataInterface
      * @param string $mappedClass        The mapped class name
      * @param array  $metadataProperties The metadata properties of the DTO
      * @param string $objectFactory      The mapped object factory
+     * @param string $dtoMapper          The mapper to be used for mapping
      *
      * @return void
      */

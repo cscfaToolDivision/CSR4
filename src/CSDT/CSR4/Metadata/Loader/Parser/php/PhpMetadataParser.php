@@ -75,9 +75,22 @@ class PhpMetadataParser implements MetadataFormatParserInterface
      * This method parse a metadata input and return an array of
      * ObjectMetadataInterface
      *
-     * @param mixed $metadata
+     * @param mixed $metadata The metadata
      *
-     * @return ObjectMetadataInterface[]
+     * @return  ObjectMetadataInterface[]
+     * @example
+     * [
+     *      [
+     *          'class' => 'class_name',
+     *          'mapper' => 'mapper_class',
+     *          'factory' => 'factoryIdentifyer',
+     *          'properties' => [
+     *              'property' => 'property_name',
+     *              'transformer' => 'data_transformer',
+     *              'group' => ['group...']
+     *          ]
+     *      ]
+     *s  ];
      */
     public function parse($metadata)
     {
@@ -95,6 +108,10 @@ class PhpMetadataParser implements MetadataFormatParserInterface
      */
     public function support($metadata)
     {
+        if (!is_array($metadata)) {
+            return false;
+        }
+
         foreach ($metadata as $expectedObject) {
             if (!$this->OptionValidator->isValid($expectedObject)) {
                 return false;
@@ -102,6 +119,5 @@ class PhpMetadataParser implements MetadataFormatParserInterface
         }
 
         return true;
-
     }
 }

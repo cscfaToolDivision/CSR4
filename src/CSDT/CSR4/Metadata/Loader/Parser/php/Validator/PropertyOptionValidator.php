@@ -43,6 +43,13 @@ class PropertyOptionValidator
             return false;
         }
 
-        return !boolval(count(array_diff($property, ['property', 'transformer', 'group'])));
+        return !boolval(
+            count(
+                array_diff(
+                    $property,
+                    ['property', 'transformer', 'group']
+                )
+            )
+        );
     }
 }

@@ -1,0 +1,331 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\PhpMetadataParser",
+    "line": 33,
+    "short_desc": "PhpMetadataParser.php",
+    "long_desc": "This class is used to parse a php array to a set of ObjectMetadataInterface",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "MetadataParser"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/Parser\/php\/PhpMetadataParser.php",
+    "relative_file": null,
+    "hash": "a1d8f4646928105160d9631591204bfc4a7bb7e8",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "MetadataFormatParserInterface": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\MetadataFormatParserInterface",
+        "ResolverFactory": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\Factory\\ResolverFactory",
+        "ObjectOptionValidator": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\Validator\\ObjectOptionValidator"
+    },
+    "errors": [],
+    "interfaces": {
+        "CSDT\\CSR4\\Metadata\\Loader\\Parser\\MetadataFormatParserInterface": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\MetadataFormatParserInterface"
+    },
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 64,
+            "short_desc": "Construct",
+            "long_desc": "The default PhpMetadataParser constructor",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "resolverFactory": {
+                    "name": "resolverFactory",
+                    "line": 65,
+                    "short_desc": "The resolver factory",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\Factory\\ResolverFactory",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR4",
+                            "Metadata",
+                            "Loader",
+                            "Parser",
+                            "php",
+                            "Factory",
+                            "ResolverFactory"
+                        ],
+                        "attributes": {
+                            "startLine": 65,
+                            "endLine": 65
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "optionValidator": {
+                    "name": "optionValidator",
+                    "line": 66,
+                    "short_desc": "The option validator",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\Validator\\ObjectOptionValidator",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR4",
+                            "Metadata",
+                            "Loader",
+                            "Parser",
+                            "php",
+                            "Validator",
+                            "ObjectOptionValidator"
+                        ],
+                        "attributes": {
+                            "startLine": 66,
+                            "endLine": 66
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "parse": {
+            "name": "parse",
+            "line": 95,
+            "short_desc": "Parse",
+            "long_desc": "This method parse a metadata input and return an array of\nObjectMetadataInterface",
+            "hint": [
+                [
+                    "\\CSDT\\CSR4\\Metadata\\ObjectMetadata\\ObjectMetadataInterface",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "example": [
+                    [
+                        "[\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "[\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "'class'",
+                        "=>",
+                        "'class_name',\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "'mapper'",
+                        "=>",
+                        "'mapper_class',\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "'factory'",
+                        "=>",
+                        "'factoryIdentifyer',\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "'properties'",
+                        "=>",
+                        "[\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "'property'",
+                        "=>",
+                        "'property_name',\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "'transformer'",
+                        "=>",
+                        "'data_transformer',\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "'group'",
+                        "=>",
+                        "['group...']\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "]\n",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "]\ns",
+                        "",
+                        "];"
+                    ]
+                ]
+            },
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "metadata": {
+                    "name": "metadata",
+                    "line": 95,
+                    "short_desc": "The metadata",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "support": {
+            "name": "support",
+            "line": 109,
+            "short_desc": "Support",
+            "long_desc": "This method indicate if the parser support or not the given metadata",
+            "hint": [
+                [
+                    "bool",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "metadata": {
+                    "name": "metadata",
+                    "line": 109,
+                    "short_desc": "The metadata",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

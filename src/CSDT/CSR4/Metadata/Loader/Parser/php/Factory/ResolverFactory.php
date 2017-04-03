@@ -40,7 +40,7 @@ class ResolverFactory
      *
      * @return OptionsResolver
      */
-    public function getPropertyOptionResolver()
+    public function getPropertyOptionResolver() : OptionsResolver
     {
         $resolver = new OptionsResolver();
 
@@ -54,7 +54,7 @@ class ResolverFactory
 
         $resolver->setAllowedValues(
             'group',
-            \Closure::fromCallable(array(new GroupValidator(), 'isValid'))
+            array(new GroupValidator(), 'isValid')
         );
 
         return $resolver;
@@ -67,7 +67,7 @@ class ResolverFactory
      *
      * @return OptionsResolver
      */
-    public function getObjectOptionResolver()
+    public function getObjectOptionResolver() : OptionsResolver
     {
         $resolver = new OptionsResolver();
 

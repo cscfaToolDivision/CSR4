@@ -47,7 +47,7 @@ interface MetadataFormatParserInterface
      * This method parse a metadata input and return an array of
      * ObjectMetadataInterface
      *
-     * @param mixed $metadata
+     * @param mixed $metadata The metadata
      *
      * @return ObjectMetadataInterface[]
      */

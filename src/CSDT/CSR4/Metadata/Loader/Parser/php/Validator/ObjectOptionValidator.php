@@ -73,8 +73,14 @@ class ObjectOptionValidator
             return false;
         }
 
-        return !boolval(count(array_diff($option, ['class', 'mapper', 'factory', 'properties'])));
-
+        return !boolval(
+            count(
+                array_diff(
+                    $option,
+                    ['class', 'mapper', 'factory', 'properties']
+                )
+            )
+        );
     }
 
     /**
