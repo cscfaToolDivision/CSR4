@@ -32,6 +32,15 @@ use CSDT\CSR4\Metadata\ObjectMetadata\Traits\ObjectMetadataTrait;
 abstract class AbstractObjectMetadata implements ObjectMetadataInterface
 {
     /**
+     * Dto class
+     *
+     * This property store the dto class metadata
+     *
+     * @var string
+     */
+    private $dtoClass;
+
+    /**
      * Metadata properties
      *
      * This property store the metadata properties of the object
@@ -84,6 +93,7 @@ abstract class AbstractObjectMetadata implements ObjectMetadataInterface
      *
      * The default AbstractObjectMetadata constructor
      *
+     * @param string $dtoClass           The dto class name
      * @param string $mappedClass        The mapped class name
      * @param array  $metadataProperties The metadata properties of the DTO
      * @param string $objectFactory      The mapped object factory
@@ -92,11 +102,13 @@ abstract class AbstractObjectMetadata implements ObjectMetadataInterface
      * @return void
      */
     public function __construct(
+        string $dtoClass,
         string $mappedClass,
         array $metadataProperties = [],
         string $objectFactory = null,
         string $dtoMapper = null
     ) {
+        $this->dtoClass = $dtoClass;
         $this->metadataProperties = $metadataProperties;
         $this->mappedClass = $mappedClass;
         $this->objectFactory = $objectFactory;

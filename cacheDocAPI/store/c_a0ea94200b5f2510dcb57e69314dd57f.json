@@ -1,8 +1,8 @@
 {
-    "name": "CSDT\\CSR4\\Metadata\\Loader\\MetadataLoaderInterface",
-    "line": 32,
-    "short_desc": "MetadataLoaderInterface.php",
-    "long_desc": "This interface define the base methods of the MetadataLoader",
+    "name": "CSDT\\CSR4\\Metadata\\Loader\\Abstracts\\AbstractMetadataLoader",
+    "line": 35,
+    "short_desc": "AbstractMetadataLoader.php",
+    "long_desc": "This class is used as abstract metadata loader",
     "hint": null,
     "tags": {
         "category": [
@@ -34,31 +34,38 @@
             ]
         ]
     },
-    "namespace": "CSDT\\CSR4\\Metadata\\Loader",
-    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/MetadataLoaderInterface.php",
+    "namespace": "CSDT\\CSR4\\Metadata\\Loader\\Abstracts",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/Abstracts\/AbstractMetadataLoader.php",
     "relative_file": null,
-    "hash": "1b3d6096b3ee2f9ff8d3e6aefc187042d70f4bf6",
+    "hash": "3de6fca9ab1aac111b6e67fbf0c8fa2109b7f86a",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
-    "is_interface": true,
+    "is_interface": false,
     "aliases": {
+        "MetadataLoaderInterface": "CSDT\\CSR4\\Metadata\\Loader\\MetadataLoaderInterface",
+        "MetadataLoaderTrait": "CSDT\\CSR4\\Metadata\\Loader\\Traits\\MetadataLoaderTrait",
         "MetadataFormatParserInterface": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\MetadataFormatParserInterface",
-        "CacheItemPoolInterface": "Psr\\Cache\\CacheItemPoolInterface"
+        "CacheItemPoolInterface": "Psr\\Cache\\CacheItemPoolInterface",
+        "UnsupportedMetadataException": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\UnsupportedMetadataException"
     },
     "errors": [],
-    "interfaces": [],
-    "traits": [],
+    "interfaces": {
+        "CSDT\\CSR4\\Metadata\\Loader\\MetadataLoaderInterface": "CSDT\\CSR4\\Metadata\\Loader\\MetadataLoaderInterface"
+    },
+    "traits": {
+        "CSDT\\CSR4\\Metadata\\Loader\\Traits\\MetadataLoaderTrait": "CSDT\\CSR4\\Metadata\\Loader\\Traits\\MetadataLoaderTrait"
+    },
     "properties": [],
     "methods": {
-        "setDebug": {
-            "name": "setDebug",
-            "line": 44,
-            "short_desc": "Set debug",
-            "long_desc": "This method allow to set the debug status",
+        "__construct": {
+            "name": "__construct",
+            "line": 88,
+            "short_desc": "Construct",
+            "long_desc": "The default AbstractMetadataLoader contructor",
             "hint": [
                 [
-                    "CSDT\\CSR4\\Metadata\\Loader\\$this",
+                    "void",
                     false
                 ]
             ],
@@ -75,46 +82,26 @@
             "exceptions": [],
             "errors": [],
             "parameters": {
-                "debug": {
-                    "name": "debug",
-                    "line": 44,
-                    "short_desc": "The debug status of the current application instance",
+                "parsers": {
+                    "name": "parsers",
+                    "line": 89,
+                    "short_desc": "A set of parser to add",
                     "long_desc": null,
                     "hint": [
                         [
-                            "bool",
+                            "array",
                             false
                         ]
                     ],
                     "tags": [],
-                    "modifiers": "bool",
-                    "default": "true",
+                    "modifiers": "array",
+                    "default": "[]",
                     "is_by_ref": false
-                }
-            }
-        },
-        "setCache": {
-            "name": "setCache",
-            "line": 57,
-            "short_desc": "Set cache",
-            "long_desc": "This method allow to set the cache item pool that is in charge of the metadata\ncaching",
-            "hint": [
-                [
-                    "CSDT\\CSR4\\Metadata\\Loader\\$this",
-                    false
-                ]
-            ],
-            "hint_desc": "",
-            "tags": [],
-            "modifiers": 1,
-            "is_by_ref": "",
-            "exceptions": [],
-            "errors": [],
-            "parameters": {
+                },
                 "cachePool": {
                     "name": "cachePool",
-                    "line": 57,
-                    "short_desc": "The cache item pool that can be\n                                         used to store the cached metadata",
+                    "line": 90,
+                    "short_desc": "The cache pool to be used",
                     "long_desc": null,
                     "hint": [
                         [
@@ -131,18 +118,34 @@
                             "CacheItemPoolInterface"
                         ],
                         "attributes": {
-                            "startLine": 57,
-                            "endLine": 57
+                            "startLine": 90,
+                            "endLine": 90
                         }
                     },
-                    "default": null,
+                    "default": "null",
+                    "is_by_ref": false
+                },
+                "debug": {
+                    "name": "debug",
+                    "line": 91,
+                    "short_desc": "The application debug state",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "bool",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "bool",
+                    "default": "false",
                     "is_by_ref": false
                 }
             }
         },
         "addParser": {
             "name": "addParser",
-            "line": 68,
+            "line": 115,
             "short_desc": "Add parser",
             "long_desc": "This method is used to add a new metadata format parser to the set of parser",
             "hint": [
@@ -160,7 +163,7 @@
             "parameters": {
                 "parser": {
                     "name": "parser",
-                    "line": 68,
+                    "line": 115,
                     "short_desc": "The parser to add",
                     "long_desc": null,
                     "hint": [
@@ -181,8 +184,8 @@
                             "MetadataFormatParserInterface"
                         ],
                         "attributes": {
-                            "startLine": 68,
-                            "endLine": 68
+                            "startLine": 115,
+                            "endLine": 115
                         }
                     },
                     "default": null,
@@ -192,7 +195,7 @@
         },
         "load": {
             "name": "load",
-            "line": 80,
+            "line": 134,
             "short_desc": "Load",
             "long_desc": "This method is used to load a metadata and store it into the metadata\nconfiguration",
             "hint": [
@@ -210,7 +213,7 @@
             "parameters": {
                 "metadataElement": {
                     "name": "metadataElement",
-                    "line": 80,
+                    "line": 134,
                     "short_desc": "The metadata to load",
                     "long_desc": null,
                     "hint": [
@@ -225,25 +228,6 @@
                     "is_by_ref": false
                 }
             }
-        },
-        "getMetadata": {
-            "name": "getMetadata",
-            "line": 89,
-            "short_desc": "Get metadata",
-            "long_desc": "This method return the loaded metadata",
-            "hint": [
-                [
-                    "array",
-                    false
-                ]
-            ],
-            "hint_desc": "",
-            "tags": [],
-            "modifiers": 1,
-            "is_by_ref": "",
-            "exceptions": [],
-            "errors": [],
-            "parameters": []
         }
     },
     "constants": []

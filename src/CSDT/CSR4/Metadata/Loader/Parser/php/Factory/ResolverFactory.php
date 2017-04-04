@@ -45,16 +45,19 @@ class ResolverFactory
         $resolver = new OptionsResolver();
 
         $resolver->setRequired('property')
-            ->setDefined('transformer')
+            ->setDefault('transformer', null)
             ->setDefault('group', []);
 
         $resolver->setAllowedTypes('property', 'string')
-            ->setAllowedTypes('transformer', 'string')
+            ->setAllowedTypes('transformer', array('string', 'null'))
             ->setAllowedTypes('group', 'array');
 
         $resolver->setAllowedValues(
             'group',
-            array(new GroupValidator(), 'isValid')
+            function ($values) {
+                $validator = new GroupValidator();
+                return $validator->isValid($values);
+            }
         );
 
         return $resolver;
@@ -72,13 +75,15 @@ class ResolverFactory
         $resolver = new OptionsResolver();
 
         $resolver->setRequired('class')
-            ->setDefined('mapper')
-            ->setDefined('factory')
+            ->setRequired('dto')
+            ->setDefault('mapper', null)
+            ->setDefault('factory', null)
             ->setDefault('properties', []);
 
         $resolver->setAllowedTypes('class', 'string')
-            ->setAllowedTypes('mapper', 'string')
-            ->setAllowedTypes('factory', 'string')
+            ->setAllowedTypes('dto', 'string')
+            ->setAllowedTypes('mapper', array('string', 'null'))
+            ->setAllowedTypes('factory', array('string', 'null'))
             ->setAllowedTypes('properties', 'array');
 
         return $resolver;

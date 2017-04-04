@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>CSDT\CSR4\Metadata\Loader\MetadataLoader | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:CSDT_CSR4_Metadata_Loader_MetadataLoader" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../CSDT.html">CSDT</a></li>
+                                        <li><a href="../../../../CSDT/CSR4.html">CSR4</a></li>
+                                        <li><a href="../../../../CSDT/CSR4/Metadata.html">Metadata</a></li>
+                                        <li><a href="../../../../CSDT/CSR4/Metadata/Loader.html">Loader</a></li>
+    
+                <li>MetadataLoader</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            MetadataLoader
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>MetadataLoader</strong>        extends <a href="../../../../CSDT/CSR4/Metadata/Loader/Abstracts/AbstractMetadataLoader.html"><abbr title="CSDT\CSR4\Metadata\Loader\Abstracts\AbstractMetadataLoader">AbstractMetadataLoader</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>MetadataLoader.php</p>            <p>This class is the default implementation of the MetadataLoaderInterface</p>        </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    MetadataLoaderTrait.php
+                </div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_metadataContainer">
+                                        protected                                        string
+                </td>
+                <td>$metadataContainer</td>
+                <td class="last">Metadata container</td>
+                <td><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#property_metadataContainer"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cachePoolContainer">
+                                        protected                                        string
+                </td>
+                <td>$cachePoolContainer</td>
+                <td class="last">Cache pool container</td>
+                <td><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#property_cachePoolContainer"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_debugContainer">
+                                        protected                                        string
+                </td>
+                <td>$debugContainer</td>
+                <td class="last">Debug container</td>
+                <td><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#property_debugContainer"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addParser">addParser</a>(<a href="../../../../CSDT/CSR4/Metadata/Loader/Parser/MetadataFormatParserInterface.html"><abbr title="CSDT\CSR4\Metadata\Loader\Parser\MetadataFormatParserInterface">MetadataFormatParserInterface</abbr></a> $parser)
+        
+                                            <p>Add parser</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_addParser"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMetadata">getMetadata</a>()
+        
+                                            <p>Get metadata</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_getMetadata"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_load">load</a>(mixed $metadataElement)
+        
+                                            <p>Load</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_load"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCache">setCache</a>(<abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr> $cachePool)
+        
+                                            <p>Set cache</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_setCache"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDebug">setDebug</a>(bool $debug = true)
+        
+                                            <p>Set debug</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_setDebug"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $parsers = [], <abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr> $cachePool = null, bool $debug = false)
+        
+                                            <p>Construct</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../CSDT/CSR4/Metadata/Loader/Abstracts/AbstractMetadataLoader.html#method___construct"><abbr title="CSDT\CSR4\Metadata\Loader\Abstracts\AbstractMetadataLoader">AbstractMetadataLoader</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_addParser">
+        <div class="location">in <a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_addParser"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a> at         line 72</div>
+        <code>    abstract                <abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr>
+    <strong>addParser</strong>(<a href="../../../../CSDT/CSR4/Metadata/Loader/Parser/MetadataFormatParserInterface.html"><abbr title="CSDT\CSR4\Metadata\Loader\Parser\MetadataFormatParserInterface">MetadataFormatParserInterface</abbr></a> $parser)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add parser</p>                    <p>This method is used to add a new metadata format parser to the set of parser</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../CSDT/CSR4/Metadata/Loader/Parser/MetadataFormatParserInterface.html"><abbr title="CSDT\CSR4\Metadata\Loader\Parser\MetadataFormatParserInterface">MetadataFormatParserInterface</abbr></a></td>
+                <td>$parser</td>
+                <td>The parser to add</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMetadata">
+        <div class="location">in <a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_getMetadata"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a> at         line 81</div>
+        <code>                    array
+    <strong>getMetadata</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get metadata</p>                    <p>This method return the loaded metadata</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_load">
+        <div class="location">in <a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_load"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a> at         line 96</div>
+        <code>    abstract                void
+    <strong>load</strong>(mixed $metadataElement)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load</p>                    <p>This method is used to load a metadata and store it into the metadata
+configuration</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$metadataElement</td>
+                <td>The metadata to load</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCache">
+        <div class="location">in <a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_setCache"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a> at         line 109</div>
+        <code>                    <abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr>
+    <strong>setCache</strong>(<abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr> $cachePool)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set cache</p>                    <p>This method allow to set the cache item pool that is in charge of the metadata
+caching</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr></td>
+                <td>$cachePool</td>
+                <td>The cache item pool that can be
+                                         used to store the cached metadata</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDebug">
+        <div class="location">in <a href="../../../../CSDT/CSR4/Metadata/Loader/Traits/MetadataLoaderTrait.html#method_setDebug"><abbr title="CSDT\CSR4\Metadata\Loader\Traits\MetadataLoaderTrait">MetadataLoaderTrait</abbr></a> at         line 126</div>
+        <code>                    <abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr>
+    <strong>setDebug</strong>(bool $debug = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set debug</p>                    <p>This method allow to set the debug status</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$debug</td>
+                <td>The debug status of the current application instance</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CSDT\CSR4\Metadata\Loader\Traits\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../CSDT/CSR4/Metadata/Loader/Abstracts/AbstractMetadataLoader.html#method___construct"><abbr title="CSDT\CSR4\Metadata\Loader\Abstracts\AbstractMetadataLoader">AbstractMetadataLoader</abbr></a> at         line 88</div>
+        <code>                    void
+    <strong>__construct</strong>(array $parsers = [], <abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr> $cachePool = null, bool $debug = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Construct</p>                    <p>The default AbstractMetadataLoader contructor</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parsers</td>
+                <td>A set of parser to add</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr></td>
+                <td>$cachePool</td>
+                <td>The cache pool to be used</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$debug</td>
+                <td>The application debug state</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

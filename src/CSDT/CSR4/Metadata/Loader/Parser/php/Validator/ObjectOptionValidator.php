@@ -64,8 +64,7 @@ class ObjectOptionValidator
      */
     public function isValid(array $option) : bool
     {
-
-        if (!isset($option['class'])) {
+        if ((!isset($option['class'])) || (!isset($option['dto']))) {
             return false;
         }
 
@@ -76,8 +75,8 @@ class ObjectOptionValidator
         return !boolval(
             count(
                 array_diff(
-                    $option,
-                    ['class', 'mapper', 'factory', 'properties']
+                    array_keys($option),
+                    ['dto', 'class', 'mapper', 'factory', 'properties']
                 )
             )
         );
@@ -99,7 +98,9 @@ class ObjectOptionValidator
         }
 
         foreach ($option['properties'] as $property) {
-            if (!$this->propertyValidator->isValid($property)) {
+            if (!is_array($property)
+                || !$this->propertyValidator->isValid($property)
+            ) {
                 return false;
             }
         }

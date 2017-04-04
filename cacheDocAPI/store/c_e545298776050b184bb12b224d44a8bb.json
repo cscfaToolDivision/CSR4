@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Abstracts",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/Abstracts\/AbstractObjectMetadata.php",
     "relative_file": null,
-    "hash": "0dc4c918a1bfb1ef7f3a67df77b232a62136e419",
+    "hash": "5c3a557bf34fdb6132fff31aec9038c0c2aad08d",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -57,7 +57,7 @@
     "methods": {
         "__construct": {
             "name": "__construct",
-            "line": 94,
+            "line": 104,
             "short_desc": "Construct",
             "long_desc": "The default AbstractObjectMetadata constructor",
             "hint": [
@@ -73,9 +73,25 @@
             "exceptions": [],
             "errors": [],
             "parameters": {
+                "dtoClass": {
+                    "name": "dtoClass",
+                    "line": 105,
+                    "short_desc": "The dto class name",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "string",
+                    "default": null,
+                    "is_by_ref": false
+                },
                 "mappedClass": {
                     "name": "mappedClass",
-                    "line": 95,
+                    "line": 106,
                     "short_desc": "The mapped class name",
                     "long_desc": null,
                     "hint": [
@@ -91,7 +107,7 @@
                 },
                 "metadataProperties": {
                     "name": "metadataProperties",
-                    "line": 96,
+                    "line": 107,
                     "short_desc": "The metadata properties of the DTO",
                     "long_desc": null,
                     "hint": [
@@ -107,7 +123,7 @@
                 },
                 "objectFactory": {
                     "name": "objectFactory",
-                    "line": 97,
+                    "line": 108,
                     "short_desc": "The mapped object factory",
                     "long_desc": null,
                     "hint": [
@@ -123,7 +139,7 @@
                 },
                 "dtoMapper": {
                     "name": "dtoMapper",
-                    "line": 98,
+                    "line": 109,
                     "short_desc": "The mapper to be used for mapping",
                     "long_desc": null,
                     "hint": [

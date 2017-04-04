@@ -46,7 +46,7 @@ class PropertyOptionValidator
         return !boolval(
             count(
                 array_diff(
-                    $property,
+                    array_keys($property),
                     ['property', 'transformer', 'group']
                 )
             )

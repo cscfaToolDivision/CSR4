@@ -104,6 +104,26 @@
                     <abbr title="CSDT\CSR4\Metadata\Loader\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setDebug">setDebug</a>(bool $debug = true)
+        
+                                            <p>Set debug</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="CSDT\CSR4\Metadata\Loader\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCache">setCache</a>(<abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr> $cachePool)
+        
+                                            <p>Set cache</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="CSDT\CSR4\Metadata\Loader\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_addParser">addParser</a>(<a href="../../../../CSDT/CSR4/Metadata/Loader/Parser/MetadataFormatParserInterface.html"><abbr title="CSDT\CSR4\Metadata\Loader\Parser\MetadataFormatParserInterface">MetadataFormatParserInterface</abbr></a> $parser)
         
                                             <p>Add parser</p>                </div>
@@ -136,8 +156,90 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_setDebug">
+        <div class="location">at         line 44</div>
+        <code>                    <abbr title="CSDT\CSR4\Metadata\Loader\$this">$this</abbr>
+    <strong>setDebug</strong>(bool $debug = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set debug</p>                    <p>This method allow to set the debug status</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$debug</td>
+                <td>The debug status of the current application instance</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CSDT\CSR4\Metadata\Loader\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCache">
+        <div class="location">at         line 57</div>
+        <code>                    <abbr title="CSDT\CSR4\Metadata\Loader\$this">$this</abbr>
+    <strong>setCache</strong>(<abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr> $cachePool)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set cache</p>                    <p>This method allow to set the cache item pool that is in charge of the metadata
+caching</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Cache\CacheItemPoolInterface">CacheItemPoolInterface</abbr></td>
+                <td>$cachePool</td>
+                <td>The cache item pool that can be
+                                         used to store the cached metadata</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CSDT\CSR4\Metadata\Loader\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_addParser">
-        <div class="location">at         line 42</div>
+        <div class="location">at         line 68</div>
         <code>                    <abbr title="CSDT\CSR4\Metadata\Loader\$this">$this</abbr>
     <strong>addParser</strong>(<a href="../../../../CSDT/CSR4/Metadata/Loader/Parser/MetadataFormatParserInterface.html"><abbr title="CSDT\CSR4\Metadata\Loader\Parser\MetadataFormatParserInterface">MetadataFormatParserInterface</abbr></a> $parser)
         </code>
@@ -177,7 +279,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_load">
-        <div class="location">at         line 54</div>
+        <div class="location">at         line 80</div>
         <code>                    void
     <strong>load</strong>(mixed $metadataElement)
         </code>
@@ -218,7 +320,7 @@ configuration</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getMetadata">
-        <div class="location">at         line 63</div>
+        <div class="location">at         line 89</div>
         <code>                    array
     <strong>getMetadata</strong>()
         </code>

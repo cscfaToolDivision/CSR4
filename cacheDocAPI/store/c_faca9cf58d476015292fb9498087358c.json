@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\Traits",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/Traits\/ObjectMetadataTrait.php",
     "relative_file": null,
-    "hash": "2f212cbc2d17b0992112d91a511b05ce276dc065",
+    "hash": "505286cad0a0578bf9473945446549b4aa08e27b",
     "parent": null,
     "modifiers": null,
     "is_trait": true,
@@ -50,9 +50,34 @@
     "interfaces": [],
     "traits": [],
     "properties": {
+        "dtoClassContainer": {
+            "name": "dtoClassContainer",
+            "line": 41,
+            "short_desc": "Dto class container",
+            "long_desc": "This property store the dto class container property name",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "dtoClass",
+                "attributes": {
+                    "startLine": 41,
+                    "endLine": 41,
+                    "kind": 1
+                }
+            },
+            "errors": []
+        },
         "propertyContainer": {
             "name": "propertyContainer",
-            "line": 41,
+            "line": 50,
             "short_desc": "Property container",
             "long_desc": "This property store the metadata properties container property name",
             "hint": [
@@ -68,8 +93,8 @@
                 "nodeType": "Scalar_String",
                 "value": "metadataProperties",
                 "attributes": {
-                    "startLine": 41,
-                    "endLine": 41,
+                    "startLine": 50,
+                    "endLine": 50,
                     "kind": 1
                 }
             },
@@ -77,7 +102,7 @@
         },
         "positionContainer": {
             "name": "positionContainer",
-            "line": 50,
+            "line": 59,
             "short_desc": "Position container",
             "long_desc": "This property store the position container property name",
             "hint": [
@@ -93,8 +118,8 @@
                 "nodeType": "Scalar_String",
                 "value": "traversingPosition",
                 "attributes": {
-                    "startLine": 50,
-                    "endLine": 50,
+                    "startLine": 59,
+                    "endLine": 59,
                     "kind": 1
                 }
             },
@@ -102,7 +127,7 @@
         },
         "mappedClassContainer": {
             "name": "mappedClassContainer",
-            "line": 60,
+            "line": 69,
             "short_desc": "Mapped class container",
             "long_desc": "This property store the property name where the DTO mapped class defined by\nthe metadata is stored",
             "hint": [
@@ -118,8 +143,8 @@
                 "nodeType": "Scalar_String",
                 "value": "mappedClass",
                 "attributes": {
-                    "startLine": 60,
-                    "endLine": 60,
+                    "startLine": 69,
+                    "endLine": 69,
                     "kind": 1
                 }
             },
@@ -127,7 +152,7 @@
         },
         "objectFactoryContainer": {
             "name": "objectFactoryContainer",
-            "line": 70,
+            "line": 79,
             "short_desc": "Object factory container",
             "long_desc": "This property store the object factory that is in charge of create a new\nobject instance",
             "hint": [
@@ -143,8 +168,8 @@
                 "nodeType": "Scalar_String",
                 "value": "objectFactory",
                 "attributes": {
-                    "startLine": 70,
-                    "endLine": 70,
+                    "startLine": 79,
+                    "endLine": 79,
                     "kind": 1
                 }
             },
@@ -152,7 +177,7 @@
         },
         "dtoMapperContainer": {
             "name": "dtoMapperContainer",
-            "line": 79,
+            "line": 88,
             "short_desc": "Dto mapper container",
             "long_desc": "This property store the dto mapper property name",
             "hint": [
@@ -168,8 +193,8 @@
                 "nodeType": "Scalar_String",
                 "value": "dtoMapper",
                 "attributes": {
-                    "startLine": 79,
-                    "endLine": 79,
+                    "startLine": 88,
+                    "endLine": 88,
                     "kind": 1
                 }
             },
@@ -177,9 +202,28 @@
         }
     },
     "methods": {
+        "getDtoClass": {
+            "name": "getDtoClass",
+            "line": 97,
+            "short_desc": "Get dto class",
+            "long_desc": "This method return the DTO class defined by the metadata",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
         "getMappedClass": {
             "name": "getMappedClass",
-            "line": 88,
+            "line": 109,
             "short_desc": "Get mapped class",
             "long_desc": "This method return the DTO mapped class defined by the metadata",
             "hint": [
@@ -198,7 +242,7 @@
         },
         "getByMappedProperty": {
             "name": "getByMappedProperty",
-            "line": 102,
+            "line": 123,
             "short_desc": "Get by mapped property",
             "long_desc": "This method return a property metadata by a mapped property",
             "hint": [
@@ -216,7 +260,7 @@
             "parameters": {
                 "mappedProperty": {
                     "name": "mappedProperty",
-                    "line": 102,
+                    "line": 123,
                     "short_desc": "The mapped property name",
                     "long_desc": null,
                     "hint": [
@@ -234,7 +278,7 @@
         },
         "getObjectProperties": {
             "name": "getObjectProperties",
-            "line": 114,
+            "line": 135,
             "short_desc": "Get object properties",
             "long_desc": "This method return the properties metadata as array",
             "hint": [
@@ -253,7 +297,7 @@
         },
         "getObjectFactory": {
             "name": "getObjectFactory",
-            "line": 126,
+            "line": 147,
             "short_desc": "Get object factory",
             "long_desc": "This method return the mapped object factory",
             "hint": [
@@ -276,7 +320,7 @@
         },
         "getDtoMapper": {
             "name": "getDtoMapper",
-            "line": 138,
+            "line": 159,
             "short_desc": "Get dto mapper",
             "long_desc": "This method return the dto mapper to be user on mapping",
             "hint": [
@@ -299,7 +343,7 @@
         },
         "current": {
             "name": "current",
-            "line": 150,
+            "line": 171,
             "short_desc": "Current",
             "long_desc": "This method return the current iterated value",
             "hint": [
@@ -318,7 +362,7 @@
         },
         "next": {
             "name": "next",
-            "line": 162,
+            "line": 183,
             "short_desc": "Next",
             "long_desc": "This method advance the internal pointer by one step",
             "hint": [
@@ -337,7 +381,7 @@
         },
         "key": {
             "name": "key",
-            "line": 174,
+            "line": 195,
             "short_desc": "Key",
             "long_desc": "This method return the current iterated key",
             "hint": [
@@ -356,7 +400,7 @@
         },
         "valid": {
             "name": "valid",
-            "line": 188,
+            "line": 209,
             "short_desc": "Valid",
             "long_desc": "This method validate the current internal position existence",
             "hint": [
@@ -375,7 +419,7 @@
         },
         "rewind": {
             "name": "rewind",
-            "line": 204,
+            "line": 225,
             "short_desc": "Rewind",
             "long_desc": "This method reinitialize the internal position",
             "hint": [

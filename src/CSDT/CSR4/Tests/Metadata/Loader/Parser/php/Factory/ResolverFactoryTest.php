@@ -68,7 +68,7 @@ class ResolverFactoryTest extends TestCase
         $this->assertTrue($resolver->isDefined('group'));
 
         $this->assertTrue($resolver->hasDefault('group'));
-        $this->assertFalse($resolver->hasDefault('transformer'));
+        $this->asserttrue($resolver->hasDefault('transformer'));
     }
 
     /**
@@ -89,7 +89,7 @@ class ResolverFactoryTest extends TestCase
         $this->assertTrue($resolver->isDefined('properties'));
 
         $this->assertTrue($resolver->hasDefault('properties'));
-        $this->assertFalse($resolver->hasDefault('mapper'));
-        $this->assertFalse($resolver->hasDefault('factory'));
+        $this->assertTrue($resolver->hasDefault('mapper'));
+        $this->assertTrue($resolver->hasDefault('factory'));
     }
 }

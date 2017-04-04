@@ -43,43 +43,55 @@ class ObjectMetadataTest extends TestCase
      */
     public function testConstructor()
     {
+        $dtoClass = 'DtoClass';
         $mappedClass = 'mappedClass';
         $objectFactory = 'objectFactory';
         $properties = array_values($this->getProperties());
         $dtoMapper = 'dtoMapper';
 
 
-        $instance = new ObjectMetadata($mappedClass);
+        $instance = new ObjectMetadata($dtoClass, $mappedClass);
+        $this->assertDtoClass($instance, $dtoClass);
         $this->assertMappedClass($instance, $mappedClass);
         $this->assertMetadataProperties($instance, []);
         $this->assertObjectFactory($instance);
         $this->assertTraversingProperty($instance, 0);
         $this->assertDtoMapper($instance);
 
+        $this->assertEquals($dtoClass, $instance->getDtoClass());
         $this->assertEmpty($instance->getByMappedProperty('test'));
         $this->assertNull($instance->getDtoMapper());
         $this->assertEquals($mappedClass, $instance->getMappedClass());
         $this->assertNull($instance->getObjectFactory());
         $this->assertEmpty($instance->getObjectProperties());
 
-        $instance = new ObjectMetadata($mappedClass, $properties);
+        $instance = new ObjectMetadata($dtoClass, $mappedClass, $properties);
+        $this->assertDtoClass($instance, $dtoClass);
         $this->assertMappedClass($instance, $mappedClass);
         $this->assertMetadataProperties($instance, $properties);
         $this->assertObjectFactory($instance);
         $this->assertDtoMapper($instance);
 
-        $instance = new ObjectMetadata($mappedClass, $properties, $objectFactory);
+        $instance = new ObjectMetadata(
+            $dtoClass,
+            $mappedClass,
+            $properties,
+            $objectFactory
+        );
+        $this->assertDtoClass($instance, $dtoClass);
         $this->assertMappedClass($instance, $mappedClass);
         $this->assertMetadataProperties($instance, $properties);
         $this->assertObjectFactory($instance, $objectFactory);
         $this->assertDtoMapper($instance);
 
         $instance = new ObjectMetadata(
+            $dtoClass,
             $mappedClass,
             $properties,
             $objectFactory,
             $dtoMapper
         );
+        $this->assertDtoClass($instance, $dtoClass);
         $this->assertMappedClass($instance, $mappedClass);
         $this->assertMetadataProperties($instance, $properties);
         $this->assertObjectFactory($instance, $objectFactory);
@@ -105,6 +117,27 @@ class ObjectMetadataTest extends TestCase
         $mappedClass->setValue($instance, $value);
 
         $this->assertEquals($value, $instance->getDtoMapper());
+    }
+
+    /**
+     * Test getDtoClass
+     *
+     * This method validate the getDtoClass method logic of the ObjectMetadata
+     * class
+     *
+     * @return void
+     */
+    public function testGetDtoClass()
+    {
+        $reflexClass = new \ReflectionClass(ObjectMetadata::class);
+        $instance = $reflexClass->newInstanceWithoutConstructor();
+
+        $value = 'dtoClass';
+        $mappedClass = $this->getReflexDtoClass();
+        $mappedClass->setAccessible(true);
+        $mappedClass->setValue($instance, $value);
+
+        $this->assertEquals($value, $instance->getDtoClass());
     }
 
     /**
@@ -307,6 +340,23 @@ class ObjectMetadataTest extends TestCase
      *
      * @return void
      */
+    private function assertDtoClass(ObjectMetadata $instance, string $value)
+    {
+        $dtoClass = $this->getReflexDtoClass();
+        $dtoClass->setAccessible(true);
+        $this->assertEquals($value, $dtoClass->getValue($instance));
+    }
+
+    /**
+     * Assert mappedClass
+     *
+     * This method assert the mappedClass value property
+     *
+     * @param ObjectMetadata $instance The current instance
+     * @param string         $value    The expected value
+     *
+     * @return void
+     */
     private function assertMappedClass(ObjectMetadata $instance, string $value)
     {
         $mappedClass = $this->getReflexMappedClass();
@@ -336,6 +386,18 @@ class ObjectMetadataTest extends TestCase
     private function getReflexObjectFactory() : \ReflectionProperty
     {
         return $this->getReflex('objectFactory');
+    }
+
+    /**
+     * Get relfex dtoClass
+     *
+     * This method return the dtoClass reflexion property
+     *
+     * @return \ReflectionProperty
+     */
+    private function getReflexDtoClass() : \ReflectionProperty
+    {
+        return $this->getReflex('dtoClass');
     }
 
     /**

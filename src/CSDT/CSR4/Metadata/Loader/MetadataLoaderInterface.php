@@ -16,6 +16,7 @@
 namespace CSDT\CSR4\Metadata\Loader;
 
 use CSDT\CSR4\Metadata\Loader\Parser\MetadataFormatParserInterface;
+use Psr\Cache\CacheItemPoolInterface;
 
 /**
  * MetadataLoaderInterface.php
@@ -31,6 +32,31 @@ use CSDT\CSR4\Metadata\Loader\Parser\MetadataFormatParserInterface;
 interface MetadataLoaderInterface
 {
     /**
+     * Set debug
+     *
+     * This method allow to set the debug status
+     *
+     * @param bool $debug The debug status of the current application instance
+     *
+     * @return                                      $this
+     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
+     */
+    public function setDebug(bool $debug = true) : MetadataLoaderInterface;
+
+    /**
+     * Set cache
+     *
+     * This method allow to set the cache item pool that is in charge of the metadata
+     * caching
+     *
+     * @param CacheItemPoolInterface $cachePool The cache item pool that can be
+     *                                          used to store the cached metadata
+     *
+     * @return $this
+     */
+    public function setCache(CacheItemPoolInterface $cachePool) : MetadataLoaderInterface;
+
+    /**
      * Add parser
      *
      * This method is used to add a new metadata format parser to the set of parser
@@ -39,7 +65,7 @@ interface MetadataLoaderInterface
      *
      * @return $this
      */
-    public function addParser(MetadataFormatParserInterface $parser);
+    public function addParser(MetadataFormatParserInterface $parser) : MetadataLoaderInterface;
 
     /**
      * Load

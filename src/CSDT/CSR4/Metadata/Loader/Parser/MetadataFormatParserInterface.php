@@ -38,6 +38,7 @@ interface MetadataFormatParserInterface
      * @param mixed $metadata The metadata
      *
      * @return bool
+     * @throws UnsupportedMetadataException
      */
     public function support($metadata) : bool ;
 

@@ -32,6 +32,15 @@ use CSDT\CSR4\Metadata\ObjectMetadata\Filter\MappedPropertyFilter;
 trait ObjectMetadataTrait
 {
     /**
+     * Dto class container
+     *
+     * This property store the dto class container property name
+     *
+     * @var string
+     */
+    protected $dtoClassContainer = 'dtoClass';
+
+    /**
      * Property container
      *
      * This property store the metadata properties container property name
@@ -77,6 +86,18 @@ trait ObjectMetadataTrait
      * @var string
      */
     protected $dtoMapperContainer = 'dtoMapper';
+
+    /**
+     * Get dto class
+     *
+     * This method return the DTO class defined by the metadata
+     *
+     * @return string
+     */
+    public function getDtoClass() : string
+    {
+        return $this->{$this->dtoClassContainer};
+    }
 
     /**
      * Get mapped class

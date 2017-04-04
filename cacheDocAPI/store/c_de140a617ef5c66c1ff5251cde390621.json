@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\Loader\\Parser",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/Parser\/MetadataFormatParserInterface.php",
     "relative_file": null,
-    "hash": "6e4d0e571c7e1df7268aa491ef38c0a744777219",
+    "hash": "a59a71565a24583bb867f20070c1b1264f09ff19",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -52,7 +52,7 @@
     "methods": {
         "support": {
             "name": "support",
-            "line": 42,
+            "line": 43,
             "short_desc": "Support",
             "long_desc": "This method indicate if the parser support or not the given metadata",
             "hint": [
@@ -65,12 +65,17 @@
             "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
-            "exceptions": [],
+            "exceptions": [
+                [
+                    "\\CSDT\\CSR4\\Metadata\\Loader\\Parser\\UnsupportedMetadataException",
+                    ""
+                ]
+            ],
             "errors": [],
             "parameters": {
                 "metadata": {
                     "name": "metadata",
-                    "line": 42,
+                    "line": 43,
                     "short_desc": "The metadata",
                     "long_desc": null,
                     "hint": [
@@ -88,7 +93,7 @@
         },
         "parse": {
             "name": "parse",
-            "line": 54,
+            "line": 55,
             "short_desc": "Parse",
             "long_desc": "This method parse a metadata input and return an array of\nObjectMetadataInterface",
             "hint": [
@@ -106,7 +111,7 @@
             "parameters": {
                 "metadata": {
                     "name": "metadata",
-                    "line": 54,
+                    "line": 55,
                     "short_desc": "The metadata",
                     "long_desc": null,
                     "hint": [

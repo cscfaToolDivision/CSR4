@@ -31,6 +31,8 @@
 	"minimum-stability" : "stable",
 	"require" : {
 		"cscfa_tool_division/csr3-dto" : "^1.0@stable",
-		"symfony/options-resolver" : "^3.2@stable"
+		"symfony/options-resolver" : "^3.2@stable",
+		"psr/cache" : "^1.0@stable",
+		"symfony/property-access" : "^3.2@stable"
 	}
 }

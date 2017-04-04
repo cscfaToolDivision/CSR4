@@ -1,0 +1,54 @@
+{
+    "name": "CSDT\\CSR4\\Metadata\\Loader\\MetadataLoader",
+    "line": 31,
+    "short_desc": "MetadataLoader.php",
+    "long_desc": "This class is the default implementation of the MetadataLoaderInterface",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Metadata"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Metadata\\Loader",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/MetadataLoader.php",
+    "relative_file": null,
+    "hash": "8a611e02f0b3868456460f8565b962c62cebee1c",
+    "parent": "CSDT\\CSR4\\Metadata\\Loader\\Abstracts\\AbstractMetadataLoader",
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "AbstractMetadataLoader": "CSDT\\CSR4\\Metadata\\Loader\\Abstracts\\AbstractMetadataLoader"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}
