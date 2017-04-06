@@ -1,0 +1,370 @@
+{
+    "name": "CSDT\\CSR4\\Mapper\\MapperInterface",
+    "line": 33,
+    "short_desc": "MapperInterface.php",
+    "long_desc": "This interface define the base methods of the Mapper objects",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Mapper"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\Mapper",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Mapper\/MapperInterface.php",
+    "relative_file": null,
+    "hash": "e00235eaf58d07eadb2ea64d6570a74306c7de9e",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": {
+        "ConfidenceInterface": "CSDT\\CSR4\\ConfidenceInterface",
+        "CSR3DTOInterface": "CSDT\\CSR3\\Interfaces\\CSR3DTOInterface",
+        "ObjectMetadataInterface": "CSDT\\CSR4\\Metadata\\ObjectMetadata\\ObjectMetadataInterface"
+    },
+    "errors": [],
+    "interfaces": {
+        "CSDT\\CSR4\\ConfidenceInterface": "CSDT\\CSR4\\ConfidenceInterface"
+    },
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "mapToObject": {
+            "name": "mapToObject",
+            "line": 47,
+            "short_desc": "Map to object",
+            "long_desc": "This method map the DTO properties to the object properties",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "metadata": {
+                    "name": "metadata",
+                    "line": 48,
+                    "short_desc": "The metadata of the DTO",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR4\\Metadata\\ObjectMetadata\\ObjectMetadataInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR4",
+                            "Metadata",
+                            "ObjectMetadata",
+                            "ObjectMetadataInterface"
+                        ],
+                        "attributes": {
+                            "startLine": 48,
+                            "endLine": 48
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "dto": {
+                    "name": "dto",
+                    "line": 49,
+                    "short_desc": "The dto to map from",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR3\\Interfaces\\CSR3DTOInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR3",
+                            "Interfaces",
+                            "CSR3DTOInterface"
+                        ],
+                        "attributes": {
+                            "startLine": 49,
+                            "endLine": 49
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "mappedObject": {
+                    "name": "mappedObject",
+                    "line": 50,
+                    "short_desc": "The object to map to",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "group": {
+                    "name": "group",
+                    "line": 51,
+                    "short_desc": "The array of group to map",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": "array",
+                    "default": "[]",
+                    "is_by_ref": false
+                }
+            }
+        },
+        "mapToDTO": {
+            "name": "mapToDTO",
+            "line": 66,
+            "short_desc": "Map to dto",
+            "long_desc": "This method map the object properties to the DTO properties",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "metadata": {
+                    "name": "metadata",
+                    "line": 67,
+                    "short_desc": "The metadata of the DTO",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR4\\Metadata\\ObjectMetadata\\ObjectMetadataInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR4",
+                            "Metadata",
+                            "ObjectMetadata",
+                            "ObjectMetadataInterface"
+                        ],
+                        "attributes": {
+                            "startLine": 67,
+                            "endLine": 67
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "dto": {
+                    "name": "dto",
+                    "line": 68,
+                    "short_desc": "The dto to map to",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR3\\Interfaces\\CSR3DTOInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR3",
+                            "Interfaces",
+                            "CSR3DTOInterface"
+                        ],
+                        "attributes": {
+                            "startLine": 68,
+                            "endLine": 68
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "mappedObject": {
+                    "name": "mappedObject",
+                    "line": 69,
+                    "short_desc": "The object to map from",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "group": {
+                    "name": "group",
+                    "line": 70,
+                    "short_desc": "The array of group to map",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "support": {
+            "name": "support",
+            "line": 85,
+            "short_desc": "Support",
+            "long_desc": "This method return a confidence level that indicate which confidence the\nmapper is able to grant on mapping performing",
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": "a confidence support level",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "metadata": {
+                    "name": "metadata",
+                    "line": 86,
+                    "short_desc": "The metadata of the DTO",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR4\\Metadata\\ObjectMetadata\\ObjectMetadataInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR4",
+                            "Metadata",
+                            "ObjectMetadata",
+                            "ObjectMetadataInterface"
+                        ],
+                        "attributes": {
+                            "startLine": 86,
+                            "endLine": 86
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "dto": {
+                    "name": "dto",
+                    "line": 87,
+                    "short_desc": "The mapped dto",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR3\\Interfaces\\CSR3DTOInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR3",
+                            "Interfaces",
+                            "CSR3DTOInterface"
+                        ],
+                        "attributes": {
+                            "startLine": 87,
+                            "endLine": 87
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                },
+                "mappedObject": {
+                    "name": "mappedObject",
+                    "line": 88,
+                    "short_desc": "The mapped object",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

@@ -7,20 +7,20 @@
  *
  * PHP version 7.0
  *
- * @category Mapper
+ * @category Confidence
  * @package  CSR4-ObjectMappedDTO
  * @author   matthieu vallance <matthieu.vallance@cscfa.fr>
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-namespace CSDT\CSR4\Mapper;
+namespace CSDT\CSR4;
 
 /**
  * ConfidenceInterface.php
  *
  * This interface is used to define the confidence levels of the mapper support
  *
- * @category Mapper
+ * @category Confidence
  * @package  CSR4-ObjectMappedDTO
  * @author   matthieu vallance <matthieu.vallance@cscfa.fr>
  * @license  MIT <https://opensource.org/licenses/MIT>
@@ -28,6 +28,15 @@ namespace CSDT\CSR4\Mapper;
  */
 interface ConfidenceInterface
 {
+
+    /**
+     * Unsupported confidence
+     *
+     * This constant is used to represent a unsupported confidence level
+     *
+     * @var integer
+     */
+    const UNSUPPORTED_CONFIDENCE = 0;
 
     /**
      * Low confidence

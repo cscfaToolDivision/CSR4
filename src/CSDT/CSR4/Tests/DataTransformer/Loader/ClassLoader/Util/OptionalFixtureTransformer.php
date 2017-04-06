@@ -7,37 +7,40 @@
  *
  * PHP version 7.0
  *
- * @category DataTransformer
+ * @category TestFixture
  * @package  CSR4-ObjectMappedDTO
  * @author   matthieu vallance <matthieu.vallance@cscfa.fr>
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-namespace CSDT\CSR4\DataTransformer;
+namespace CSDT\CSR4\Tests\DataTransformer\Loader\ClassLoader\Util;
+
+use CSDT\CSR4\Tests\DataTransformer\Loader\ClassLoader\Util\FixtureTransformer;
 
 /**
- * TransformerResolverAwareInterface.php
+ * OptionalFixtureTransformer.php
  *
- * This interface define how an instance will offer methods to receive a
- * transformer resolver
+ * This transformer is used as a fixture for the ClassTransformerLoader test
  *
- * @category DataTransformer
+ * @category TestFixture
  * @package  CSR4-ObjectMappedDTO
  * @author   matthieu vallance <matthieu.vallance@cscfa.fr>
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-interface TransformerResolverAwareInterface
+class OptionalFixtureTransformer extends FixtureTransformer
 {
-
     /**
-     * Set transformer resolver
+     * Construct
      *
-     * This method allow the class to store a data transformer resolver
+     * The default OptionalFixtureTransformer constructor
      *
-     * @param TransformerResolverInterface $resolver The transformer resolver
+     * @param mixed $argument An optional argument
      *
      * @return void
      */
-    public function setTransformerResolver(TransformerResolverInterface $resolver);
+    public function __construct($argument = null)
+    {
+        $argument = null;
+    }
 }

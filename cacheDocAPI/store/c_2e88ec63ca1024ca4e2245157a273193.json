@@ -1,0 +1,125 @@
+{
+    "name": "CSDT\\CSR4\\DataTransformer\\TransformerInterface",
+    "line": 29,
+    "short_desc": "TransformerInterface.php",
+    "long_desc": "This interface define the default methods of the transformers",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "DataTransformer"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\DataTransformer",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/DataTransformer\/TransformerInterface.php",
+    "relative_file": null,
+    "hash": "82face57c7e1b3a10f52c7cdbb79973038c578da",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "transformForObject": {
+            "name": "transformForObject",
+            "line": 41,
+            "short_desc": "Transform for object",
+            "long_desc": "This method is in charge of the transformation of the data before it\ninjection into a mapped object",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 41,
+                    "short_desc": "The data to transform",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "transformForDTO": {
+            "name": "transformForDTO",
+            "line": 53,
+            "short_desc": "Transform for DTO",
+            "long_desc": "This method is in charge of the transformation of the data before it\ninjection into a DTO",
+            "hint": [
+                [
+                    "mixed",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "data": {
+                    "name": "data",
+                    "line": 53,
+                    "short_desc": "The data to transform",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

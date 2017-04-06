@@ -16,10 +16,10 @@
 namespace CSDT\CSR4\DataTransformer;
 
 /**
- * TransformerResolverAwareInterface.php
+ * UnsupportedTransformerException.php
  *
- * This interface define how an instance will offer methods to receive a
- * transformer resolver
+ * This exception is used by the data transformer loader to throw an error on
+ * loading an unsupported transformer
  *
  * @category DataTransformer
  * @package  CSR4-ObjectMappedDTO
@@ -27,17 +27,6 @@ namespace CSDT\CSR4\DataTransformer;
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-interface TransformerResolverAwareInterface
+class UnsupportedTransformerException extends \LogicException
 {
-
-    /**
-     * Set transformer resolver
-     *
-     * This method allow the class to store a data transformer resolver
-     *
-     * @param TransformerResolverInterface $resolver The transformer resolver
-     *
-     * @return void
-     */
-    public function setTransformerResolver(TransformerResolverInterface $resolver);
 }

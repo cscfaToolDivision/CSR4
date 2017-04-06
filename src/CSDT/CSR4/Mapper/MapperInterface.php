@@ -15,7 +15,7 @@
  */
 namespace CSDT\CSR4\Mapper;
 
-use CSDT\CSR4\Mapper\ConfidenceInterface;
+use CSDT\CSR4\ConfidenceInterface;
 use CSDT\CSR3\Interfaces\CSR3DTOInterface;
 use CSDT\CSR4\Metadata\ObjectMetadata\ObjectMetadataInterface;
 
@@ -71,10 +71,16 @@ interface MapperInterface extends ConfidenceInterface
     );
 
     /**
-     * @param CSR3DTOInterface $dto          The mapped dto
-     * @param mixed            $mappedObject The mapped object
+     * Support
      *
-     * @return bool
+     * This method return a confidence level that indicate which confidence the
+     * mapper is able to grant on mapping performing
+     *
+     * @param ObjectMetadataInterface $metadata     The metadata of the DTO
+     * @param CSR3DTOInterface        $dto          The mapped dto
+     * @param mixed                   $mappedObject The mapped object
+     *
+     * @return int a confidence support level
      */
     public function support(
         ObjectMetadataInterface $metadata,

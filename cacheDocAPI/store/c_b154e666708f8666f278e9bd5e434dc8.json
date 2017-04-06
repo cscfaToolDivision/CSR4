@@ -1,0 +1,83 @@
+{
+    "name": "CSDT\\CSR4\\ConfidenceInterface",
+    "line": 29,
+    "short_desc": "ConfidenceInterface.php",
+    "long_desc": "This interface is used to define the confidence levels of the mapper support",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "Confidence"
+            ]
+        ],
+        "package": [
+            [
+                "CSR4-ObjectMappedDTO"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
+            ]
+        ],
+        "link": [
+            [
+                "http:\/\/cscfa.fr"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/ConfidenceInterface.php",
+    "relative_file": null,
+    "hash": "293e103197934e0b75bde630638336e05ec63240",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": {
+        "UNSUPPORTED_CONFIDENCE": {
+            "name": "UNSUPPORTED_CONFIDENCE",
+            "line": 39,
+            "short_desc": "Unsupported confidence",
+            "long_desc": "This constant is used to represent a unsupported confidence level"
+        },
+        "LOW_CONFIDENCE": {
+            "name": "LOW_CONFIDENCE",
+            "line": 48,
+            "short_desc": "Low confidence",
+            "long_desc": "This constant is used to represent a low confidence level of support"
+        },
+        "MEDIUM_CONFIDENCE": {
+            "name": "MEDIUM_CONFIDENCE",
+            "line": 57,
+            "short_desc": "Low confidence",
+            "long_desc": "This constant is used to represent a medium confidence level of support"
+        },
+        "HIGH_CONFIDENCE": {
+            "name": "HIGH_CONFIDENCE",
+            "line": 66,
+            "short_desc": "Low confidence",
+            "long_desc": "This constant is used to represent a high confidence level of support"
+        },
+        "DEDICATED_CONFIDENCE": {
+            "name": "DEDICATED_CONFIDENCE",
+            "line": 75,
+            "short_desc": "Low confidence",
+            "long_desc": "This constant is used to represent a dedicated level of support"
+        }
+    }
+}

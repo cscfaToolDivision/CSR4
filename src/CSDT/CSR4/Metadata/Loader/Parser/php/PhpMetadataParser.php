@@ -108,6 +108,20 @@ class PhpMetadataParser implements MetadataFormatParserInterface
             );
         }
 
+        return $this->parseMetadata($metadata);
+    }
+
+    /**
+     * Parse metadata
+     *
+     * This method parse the metadata to array without validation
+     *
+     * @param mixed $metadata The metadata
+     *
+     * @return ObjectMetadataInterface[]
+     */
+    private function parseMetadata($metadata) : array
+    {
         $objects = [];
         foreach ($metadata as $objectOption) {
             $objects[] = $this->resolveObject(

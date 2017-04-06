@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/Parser\/php\/PhpMetadataParser.php",
     "relative_file": null,
-    "hash": "cbfd4dd35a7e0ecb585ef2ad9bff126b5374da0c",
+    "hash": "892bd55c38d124bead698df977471f77a12d69e0",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -348,7 +348,7 @@
         },
         "support": {
             "name": "support",
-            "line": 200,
+            "line": 214,
             "short_desc": "Support",
             "long_desc": "This method indicate if the parser support or not the given metadata",
             "hint": [
@@ -529,7 +529,7 @@
             "parameters": {
                 "metadata": {
                     "name": "metadata",
-                    "line": 200,
+                    "line": 214,
                     "short_desc": "The metadata",
                     "long_desc": null,
                     "hint": [

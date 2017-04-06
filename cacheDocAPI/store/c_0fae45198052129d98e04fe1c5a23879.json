@@ -1,0 +1,139 @@
+{
+    "name": "CSDT\\CSR4\\DataTransformer\\TransformerResolverInterface",
+    "line": 31,
+    "short_desc": "TransformerResolverInterface.php",
+    "long_desc": "This interface define how the resolvers offer access to the",
+    "hint": null,
+    "tags": {
+        "category": [
+            [
+                "category"
+            ]
+        ],
+        "package": [
+            [
+                "project_name"
+            ]
+        ],
+        "author": [
+            [
+                "matthieu",
+                "vallance",
+                "<matthieu.vallance@cscfa.fr>"
+            ]
+        ],
+        "license": [
+            [
+                "license"
+            ]
+        ],
+        "link": [
+            [
+                "link"
+            ]
+        ]
+    },
+    "namespace": "CSDT\\CSR4\\DataTransformer",
+    "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/DataTransformer\/TransformerResolverInterface.php",
+    "relative_file": null,
+    "hash": "5d89a06fb5474ec880a7e1cc0bbaebd467a211f3",
+    "parent": null,
+    "modifiers": null,
+    "is_trait": false,
+    "is_interface": true,
+    "aliases": {
+        "TransformerLoaderInterface": "CSDT\\CSR4\\DataTransformer\\Loader\\TransformerLoaderInterface"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "addTransformerLoader": {
+            "name": "addTransformerLoader",
+            "line": 43,
+            "short_desc": "Add transformer loader",
+            "long_desc": "This method add a data transformer loader to the set of loaders to be used\nfor transformer resolver",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "loader": {
+                    "name": "loader",
+                    "line": 43,
+                    "short_desc": "The data transformer loader",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\CSDT\\CSR4\\DataTransformer\\Loader\\TransformerLoaderInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Name_FullyQualified",
+                        "parts": [
+                            "CSDT",
+                            "CSR4",
+                            "DataTransformer",
+                            "Loader",
+                            "TransformerLoaderInterface"
+                        ],
+                        "attributes": {
+                            "startLine": 43,
+                            "endLine": 43
+                        }
+                    },
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "resolve": {
+            "name": "resolve",
+            "line": 55,
+            "short_desc": "Resolve",
+            "long_desc": "This method resolve the loader that is in charge of the transformer loading\nand return the transformer from the resolved loader",
+            "hint": [
+                [
+                    "\\CSDT\\CSR4\\DataTransformer\\TransformerInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "transfomer": {
+                    "name": "transfomer",
+                    "line": 55,
+                    "short_desc": "The transformer to resolve",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "mixed",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": null,
+                    "default": null,
+                    "is_by_ref": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

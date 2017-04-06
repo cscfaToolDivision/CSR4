@@ -45,6 +45,9 @@ fi
 runner "$PHP vendor/bin/phpcbf src/"
 echo "$TEST_RES" > doc/phpcbf.txt
 
+runner "$PHP vendor/bin/phpcbf --standard=PSR2 src/"
+echo "$TEST_RES" >> doc/phpcbf.txt
+
 test "$PHP vendor/bin/phpunit" PHPUnit 100
 echo "$TEST_RES" > doc/phpunit.txt
 

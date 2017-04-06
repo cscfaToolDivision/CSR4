@@ -219,7 +219,13 @@ abstract class AbstractMetadataLoader implements MetadataLoaderInterface
     }
 
     /**
+     * Merge metadata
+     *
+     * This method merge the given metadata with the current stored
+     *
      * @param array $metadata The metadata to merge
+     *
+     * @return void
      */
     private function mergeMetadata(array $metadata)
     {

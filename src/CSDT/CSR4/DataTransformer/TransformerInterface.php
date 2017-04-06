@@ -16,10 +16,9 @@
 namespace CSDT\CSR4\DataTransformer;
 
 /**
- * TransformerResolverAwareInterface.php
+ * TransformerInterface.php
  *
- * This interface define how an instance will offer methods to receive a
- * transformer resolver
+ * This interface define the default methods of the transformers
  *
  * @category DataTransformer
  * @package  CSR4-ObjectMappedDTO
@@ -27,17 +26,29 @@ namespace CSDT\CSR4\DataTransformer;
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-interface TransformerResolverAwareInterface
+interface TransformerInterface
 {
+    /**
+     * Transform for object
+     *
+     * This method is in charge of the transformation of the data before it
+     * injection into a mapped object
+     *
+     * @param mixed $data The data to transform
+     *
+     * @return mixed
+     */
+    public function transformForObject($data);
 
     /**
-     * Set transformer resolver
+     * Transform for DTO
      *
-     * This method allow the class to store a data transformer resolver
+     * This method is in charge of the transformation of the data before it
+     * injection into a DTO
      *
-     * @param TransformerResolverInterface $resolver The transformer resolver
+     * @param mixed $data The data to transform
      *
-     * @return void
+     * @return mixed
      */
-    public function setTransformerResolver(TransformerResolverInterface $resolver);
+    public function transformForDTO($data);
 }
