@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\DataTransformer",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/DataTransformer\/TransformerResolverAwareInterface.php",
     "relative_file": null,
-    "hash": "240cc5229e5d5210bfb4d1f388287398fdea8c23",
+    "hash": "da543abd1b32f16c80ec82ef220acc9a406e5c79",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -95,6 +95,25 @@
                     "is_by_ref": false
                 }
             }
+        },
+        "getTransformerResolver": {
+            "name": "getTransformerResolver",
+            "line": 51,
+            "short_desc": "Get ransformer resolver",
+            "long_desc": "This method return the store data transformer resolver",
+            "hint": [
+                [
+                    "\\CSDT\\CSR4\\DataTransformer\\TransformerResolverInterface",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
         }
     },
     "constants": []

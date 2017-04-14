@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\ObjectMetadata",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/ObjectMetadata\/ObjectMetadataInterface.php",
     "relative_file": null,
-    "hash": "3cf030555f13f7e37da52d0fb65721899cc36e02",
+    "hash": "4db698415ceac1485a6c567784c9f5c3cafef6b0",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -52,9 +52,28 @@
     "traits": [],
     "properties": [],
     "methods": {
+        "getDtoClass": {
+            "name": "getDtoClass",
+            "line": 40,
+            "short_desc": "Get dto class",
+            "long_desc": "This method return the DTO class defined by the metadata",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
         "getMappedClass": {
             "name": "getMappedClass",
-            "line": 41,
+            "line": 49,
             "short_desc": "Get mapped class",
             "long_desc": "This method return the DTO mapped class defined by the metadata",
             "hint": [
@@ -73,7 +92,7 @@
         },
         "getObjectProperties": {
             "name": "getObjectProperties",
-            "line": 50,
+            "line": 58,
             "short_desc": "Get object properties",
             "long_desc": "This method return the properties metadata as array",
             "hint": [
@@ -92,7 +111,7 @@
         },
         "getObjectFactory": {
             "name": "getObjectFactory",
-            "line": 59,
+            "line": 67,
             "short_desc": "Get object factory",
             "long_desc": "This method return the mapped object factory",
             "hint": [
@@ -115,7 +134,7 @@
         },
         "getByMappedProperty": {
             "name": "getByMappedProperty",
-            "line": 70,
+            "line": 78,
             "short_desc": "Get by mapped property",
             "long_desc": "This method return a property metadata by a mapped property",
             "hint": [
@@ -137,7 +156,7 @@
             "parameters": {
                 "mappedProperty": {
                     "name": "mappedProperty",
-                    "line": 70,
+                    "line": 78,
                     "short_desc": "The mapped property name",
                     "long_desc": null,
                     "hint": [
@@ -155,7 +174,7 @@
         },
         "getDtoMapper": {
             "name": "getDtoMapper",
-            "line": 79,
+            "line": 87,
             "short_desc": "Get dto mapper",
             "long_desc": "This method return the dto mapper to be user on mapping",
             "hint": [

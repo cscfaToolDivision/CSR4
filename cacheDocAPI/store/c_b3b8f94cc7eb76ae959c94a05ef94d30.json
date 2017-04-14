@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\Loader\\Parser\\php\\Factory",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/Loader\/Parser\/php\/Factory\/ResolverFactory.php",
     "relative_file": null,
-    "hash": "9aa575d650a1d23a21a60c6d88806c97ed44f6d1",
+    "hash": "c79425f280246d0e8d21a169a15df151a465da85",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -72,7 +72,7 @@
         },
         "getObjectOptionResolver": {
             "name": "getObjectOptionResolver",
-            "line": 73,
+            "line": 75,
             "short_desc": "Get object option resolver",
             "long_desc": "This method create a new object option resolver",
             "hint": [

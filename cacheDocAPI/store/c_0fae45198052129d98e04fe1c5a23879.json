@@ -7,12 +7,12 @@
     "tags": {
         "category": [
             [
-                "category"
+                "DataTransformer"
             ]
         ],
         "package": [
             [
-                "project_name"
+                "CSR4-ObjectMappedDTO"
             ]
         ],
         "author": [
@@ -24,19 +24,20 @@
         ],
         "license": [
             [
-                "license"
+                "MIT",
+                "<https:\/\/opensource.org\/licenses\/MIT>"
             ]
         ],
         "link": [
             [
-                "link"
+                "http:\/\/cscfa.fr"
             ]
         ]
     },
     "namespace": "CSDT\\CSR4\\DataTransformer",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/DataTransformer\/TransformerResolverInterface.php",
     "relative_file": null,
-    "hash": "5d89a06fb5474ec880a7e1cc0bbaebd467a211f3",
+    "hash": "7590831cdc38851195a9da573d47f3eaec8026e8",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -116,8 +117,8 @@
             "exceptions": [],
             "errors": [],
             "parameters": {
-                "transfomer": {
-                    "name": "transfomer",
+                "transformer": {
+                    "name": "transformer",
                     "line": 55,
                     "short_desc": "The transformer to resolve",
                     "long_desc": null,

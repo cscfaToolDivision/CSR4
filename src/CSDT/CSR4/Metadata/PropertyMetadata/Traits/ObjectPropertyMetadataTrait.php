@@ -57,6 +57,15 @@ trait ObjectPropertyMetadataTrait
     protected $targetContainer = 'targetProperty';
 
     /**
+     * Property container
+     *
+     * This property store the property container property name
+     *
+     * @var string
+     */
+    protected $propertyContainer = 'property';
+
+    /**
      * Get mapped transformer
      *
      * This method return the data transformer of the property to apply before
@@ -91,5 +100,17 @@ trait ObjectPropertyMetadataTrait
     public function getTargetProperty() : string
     {
         return $this->{$this->targetContainer};
+    }
+
+    /**
+     * Get property
+     *
+     * This method return the property of the property metadata
+     *
+     * @return string
+     */
+    public function getProperty() : string
+    {
+        return $this->{$this->propertyContainer};
     }
 }

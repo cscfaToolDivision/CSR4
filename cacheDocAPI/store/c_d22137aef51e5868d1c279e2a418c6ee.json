@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\PropertyMetadata\\Traits",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/PropertyMetadata\/Traits\/ObjectPropertyMetadataTrait.php",
     "relative_file": null,
-    "hash": "2ff891f367caf46ea46f960365277fdf848392d4",
+    "hash": "020bba8abb80bca15d9b8541395ce6834cc6a990",
     "parent": null,
     "modifiers": null,
     "is_trait": true,
@@ -121,12 +121,37 @@
                 }
             },
             "errors": []
+        },
+        "propertyContainer": {
+            "name": "propertyContainer",
+            "line": 66,
+            "short_desc": "Property container",
+            "long_desc": "This property store the property container property name",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "value": "property",
+                "attributes": {
+                    "startLine": 66,
+                    "endLine": 66,
+                    "kind": 1
+                }
+            },
+            "errors": []
         }
     },
     "methods": {
         "getMappedTransformer": {
             "name": "getMappedTransformer",
-            "line": 67,
+            "line": 76,
             "short_desc": "Get mapped transformer",
             "long_desc": "This method return the data transformer of the property to apply before\nproperty mapping",
             "hint": [
@@ -149,7 +174,7 @@
         },
         "getMappingGroup": {
             "name": "getMappingGroup",
-            "line": 79,
+            "line": 88,
             "short_desc": "Get mapping group",
             "long_desc": "This method return the mapping group of the property",
             "hint": [
@@ -168,9 +193,28 @@
         },
         "getTargetProperty": {
             "name": "getTargetProperty",
-            "line": 91,
+            "line": 100,
             "short_desc": "Get target property",
             "long_desc": "This method return the targeted property of the property metadata",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getProperty": {
+            "name": "getProperty",
+            "line": 112,
+            "short_desc": "Get property",
+            "long_desc": "This method return the property of the property metadata",
             "hint": [
                 [
                     "string",

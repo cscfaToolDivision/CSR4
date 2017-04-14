@@ -63,6 +63,7 @@ class PhpMetadataParserTest extends TestCase
                 'properties' => [
                     [
                         'property' => 'property_name',
+                        'target' => 'target_property_name',
                         'transformer' => 'data_transformer',
                         'group' => ['group...']
                     ]
@@ -98,6 +99,7 @@ class PhpMetadataParserTest extends TestCase
                 'properties' => [
                     [
                         'property' => 'property_name',
+                        'target' => 'target_property_name',
                         'transformer' => 'data_transformer',
                         'group' => ['group...']
                     ]
@@ -165,7 +167,8 @@ class PhpMetadataParserTest extends TestCase
     {
         $this->validateProperties(
             [
-                'targetProperty' => 'property_name',
+                'property' => 'property_name',
+                'targetProperty' => 'target_property_name',
                 'dataTransformer' => 'data_transformer',
                 'mappingGroup' => ['group...'],
             ],

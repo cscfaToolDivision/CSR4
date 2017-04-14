@@ -93,6 +93,7 @@ class PhpMetadataParser implements MetadataFormatParserInterface
      *          'properties' => [
      *              [
      *                  'property' => 'property_name',
+     *                  'target' => 'target_property_name',
      *                  'transformer' => 'data_transformer',
      *                  'group' => ['group...']
      *              ]
@@ -181,6 +182,7 @@ class PhpMetadataParser implements MetadataFormatParserInterface
     {
         return new ObjectPropertyMetadata(
             $propertyOption['property'],
+            $propertyOption['target'],
             $propertyOption['group'],
             $propertyOption['transformer']
         );
@@ -204,6 +206,7 @@ class PhpMetadataParser implements MetadataFormatParserInterface
      *          'properties' => [
      *              [
      *                  'property' => 'property_name',
+     *                  'target' => 'target_property_name',
      *                  'transformer' => 'data_transformer',
      *                  'group' => ['group...']
      *              ]

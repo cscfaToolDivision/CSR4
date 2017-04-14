@@ -67,7 +67,7 @@ interface MapperInterface extends ConfidenceInterface
         ObjectMetadataInterface $metadata,
         CSR3DTOInterface $dto,
         $mappedObject,
-        $group
+        array $group = []
     );
 
     /**

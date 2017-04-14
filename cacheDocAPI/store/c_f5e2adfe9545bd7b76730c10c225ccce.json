@@ -1,8 +1,8 @@
 {
     "name": "CSDT\\CSR4\\DataTransformer\\UnsupportedTransformerException",
-    "line": 29,
+    "line": 30,
     "short_desc": "UnsupportedTransformerException.php",
-    "long_desc": "This exception is used by the data transformer loader to throw an error on loading an unsupported transformer",
+    "long_desc": "This exception is used by the data transformer loader to throw an error on\nloading an unsupported transformer",
     "hint": null,
     "tags": {
         "category": [
@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\DataTransformer",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/DataTransformer\/UnsupportedTransformerException.php",
     "relative_file": null,
-    "hash": "2880d168a399c99ba628f18730022893bc461ece",
+    "hash": "f035a0072aea7b0000c779d5a83780fd05e0748d",
     "parent": "LogicException",
     "modifiers": null,
     "is_trait": false,

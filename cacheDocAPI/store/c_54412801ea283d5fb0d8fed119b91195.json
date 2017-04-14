@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Metadata\\PropertyMetadata",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Metadata\/PropertyMetadata\/ObjectPropertyMetadataInterface.php",
     "relative_file": null,
-    "hash": "4714220443eb531990c0dbf0441406813b35ad9b",
+    "hash": "fc7242cb3922ff83347b6970128189c3382a0faa",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -95,6 +95,25 @@
             "line": 57,
             "short_desc": "Get target property",
             "long_desc": "This method return the targeted property of the property metadata",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getProperty": {
+            "name": "getProperty",
+            "line": 66,
+            "short_desc": "Get property",
+            "long_desc": "This method return the property of the property metadata",
             "hint": [
                 [
                     "string",

@@ -48,9 +48,9 @@ interface TransformerResolverInterface
      * This method resolve the loader that is in charge of the transformer loading
      * and return the transformer from the resolved loader
      *
-     * @param mixed $transfomer The transformer to resolve
+     * @param mixed $transformer The transformer to resolve
      *
      * @return TransformerInterface
      */
-    public function resolve($transfomer) : TransformerInterface ;
+    public function resolve($transformer) : TransformerInterface ;
 }

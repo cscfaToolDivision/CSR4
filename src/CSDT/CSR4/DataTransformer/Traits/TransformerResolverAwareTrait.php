@@ -13,13 +13,15 @@
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-namespace CSDT\CSR4\DataTransformer;
+namespace CSDT\CSR4\DataTransformer\Traits;
+
+use CSDT\CSR4\DataTransformer\TransformerResolverInterface;
 
 /**
- * TransformerResolverAwareInterface.php
+ * TransformerResolverAwareTrait.php
  *
- * This interface define how an instance will offer methods to receive a
- * transformer resolver
+ * This trait is used to define the base logic of the data transformer resolver
+ * aware interface
  *
  * @category DataTransformer
  * @package  CSR4-ObjectMappedDTO
@@ -27,8 +29,17 @@ namespace CSDT\CSR4\DataTransformer;
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-interface TransformerResolverAwareInterface
+trait TransformerResolverAwareTrait
 {
+    /**
+     * Resolver container
+     *
+     * This property indicate which property is used to store the data transformer
+     * resolver
+     *
+     * @var string
+     */
+    protected $resolverContainer = 'transformerResolver';
 
     /**
      * Set transformer resolver
@@ -39,7 +50,10 @@ interface TransformerResolverAwareInterface
      *
      * @return void
      */
-    public function setTransformerResolver(TransformerResolverInterface $resolver);
+    public function setTransformerResolver(TransformerResolverInterface $resolver)
+    {
+        $this->{$this->resolverContainer} = $resolver;
+    }
 
     /**
      * Get ransformer resolver
@@ -48,5 +62,8 @@ interface TransformerResolverAwareInterface
      *
      * @return TransformerResolverInterface
      */
-    public function getTransformerResolver() : TransformerResolverInterface ;
+    public function getTransformerResolver() : TransformerResolverInterface
+    {
+        return $this->{$this->resolverContainer};
+    }
 }

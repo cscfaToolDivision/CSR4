@@ -39,7 +39,9 @@ class PropertyOptionValidator
      */
     public function isValid(array $property)
     {
-        if (!isset($property['property'])) {
+        if (( ! isset($property['property']))
+            || ( ! isset($property['target']))
+        ) {
             return false;
         }
 
@@ -47,7 +49,7 @@ class PropertyOptionValidator
             count(
                 array_diff(
                     array_keys($property),
-                    ['property', 'transformer', 'group']
+                    ['target', 'property', 'transformer', 'group']
                 )
             )
         );

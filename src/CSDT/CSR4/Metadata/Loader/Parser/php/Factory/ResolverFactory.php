@@ -45,10 +45,12 @@ class ResolverFactory
         $resolver = new OptionsResolver();
 
         $resolver->setRequired('property')
+            ->setRequired('target')
             ->setDefault('transformer', null)
             ->setDefault('group', []);
 
         $resolver->setAllowedTypes('property', 'string')
+            ->setAllowedTypes('target', 'string')
             ->setAllowedTypes('transformer', array('string', 'null'))
             ->setAllowedTypes('group', 'array');
 

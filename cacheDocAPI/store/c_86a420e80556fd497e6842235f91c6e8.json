@@ -37,7 +37,7 @@
     "namespace": "CSDT\\CSR4\\Mapper",
     "file": "\/home\/workspace\/ToolDivision\/CSR4\/src\/CSDT\/CSR4\/Mapper\/MapperInterface.php",
     "relative_file": null,
-    "hash": "e00235eaf58d07eadb2ea64d6570a74306c7de9e",
+    "hash": "66ca4e7c1db0f21f479cc978abb5f5d0dad89c4a",
     "parent": null,
     "modifiers": null,
     "is_trait": false,
@@ -266,8 +266,8 @@
                         ]
                     ],
                     "tags": [],
-                    "modifiers": null,
-                    "default": null,
+                    "modifiers": "array",
+                    "default": "[]",
                     "is_by_ref": false
                 }
             }
