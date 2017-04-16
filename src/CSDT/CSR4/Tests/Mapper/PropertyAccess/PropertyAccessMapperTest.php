@@ -23,6 +23,9 @@ use CSDT\CSR3\Interfaces\CSR3DTOInterface;
 use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface;
 use CSDT\CSR4\Mapper\MappingException;
 use CSDT\CSR4\Tests\Mapper\PropertyAccess\Misc\MiscMappedObject;
+use CSDT\CSR4\DataTransformer\TransformerResolverInterface;
+use CSDT\CSR4\DataTransformer\TransformerInterface;
+use CSDT\CSR4\Tests\Mapper\PropertyAccess\Misc\NoTransformerMapper;
 
 /**
  * PropertyAccessMapperTest.php
@@ -169,9 +172,11 @@ class PropertyAccessMapperTest extends TestCase
      *
      * This method return the mapping properties to be used in tests
      *
+     * @param string $transformer The applyable transformer
+     *
      * @return PHPUnit_Framework_MockObject_MockObject[]
      */
-    private function getMappingProperties()
+    private function getMappingProperties(string $transformer = null)
     {
         $properties = [];
         for ($i = 0; $i < 3; $i ++) {
@@ -181,7 +186,7 @@ class PropertyAccessMapperTest extends TestCase
                 ->method('getMappingGroup')
                 ->willReturn(
                     [
-                    $i
+                        $i
                     ]
                 );
             $mock->expects($this->any())
@@ -192,7 +197,7 @@ class PropertyAccessMapperTest extends TestCase
                 ->willReturn('testProperty'.$i);
             $mock->expects($this->any())
                 ->method('getMappedTransformer')
-                ->willReturn(null);
+                ->willReturn($transformer);
 
             $properties[] = $mock;
         }
@@ -355,6 +360,59 @@ class PropertyAccessMapperTest extends TestCase
     }
 
     /**
+     * Test map with transformer
+     *
+     * This method validate the property accessor trait with transformer
+     *
+     * @return void
+     */
+    public function testMapWithTransformer()
+    {
+        $properties = $this->getMappingProperties('testTransformer');
+        $dto = $this->getMappingDto();
+
+        $metadata = $this->getMappingMetadata($properties);
+
+        $transformer = $this->createMock(TransformerInterface::class);
+        $transformer->expects($this->exactly(3))
+            ->method('transformForObject')
+            ->willReturnArgument(0);
+
+        $transformerResolver = $this->createMock(TransformerResolverInterface::class);
+        $transformerResolver->expects($this->any())
+            ->method('resolve')
+            ->willReturn($transformer);
+
+        $this->instance->setTransformerResolver($transformerResolver);
+
+        $mappedObject = [];
+        $this->instance->mapToObject($metadata, $dto, $mappedObject);
+    }
+
+    /**
+     * Test map with transformer
+     *
+     * This method validate the property accessor trait without transformer resolver but
+     * with property data transformer
+     *
+     * @return void
+     */
+    public function testMapWithoutTransformer()
+    {
+        $this->expectException(MappingException::class);
+
+        $properties = $this->getMappingProperties('testTransformer');
+        $dto = $this->getMappingDto();
+
+        $metadata = $this->getMappingMetadata($properties);
+
+        $instance = new NoTransformerMapper();
+
+        $mappedObject = [];
+        $instance->mapToObject($metadata, $dto, $mappedObject);
+    }
+
+    /**
      * Test mapToObject
      *
      * This method validate the PropertyAccessMapper mapToObject logic
@@ -402,5 +460,119 @@ class PropertyAccessMapperTest extends TestCase
         $object = $this->createMock(\stdClass::class);
 
         $this->instance->mapToObject($metadata, $this->createMock(CSR3DTOInterface::class), $object);
+    }
+
+    /**
+     * Get mapping to dto
+     *
+     * This method return the dto for the tests
+     *
+     * @param int $setCount The setter call count for the DTO onject
+     *
+     * @return PHPUnit_Framework_MockObject_MockObject
+     */
+    private function getMappingToDto($setCount = 3)
+    {
+        $dto = $this->createMock(CSR3DTOInterface::class);
+        $dto->expects($this->any())
+            ->method('offsetExists')
+            ->withConsecutive(
+                $this->equalTo('testProperty0'),
+                $this->equalTo('testProperty1'),
+                $this->equalTo('testProperty2')
+            )
+            ->will($this->returnValue(true));
+
+        $dto->expects($this->exactly($setCount))
+            ->method('offsetSet')
+            ->withConsecutive(
+                $this->equalTo('testProperty0'),
+                $this->equalTo('testProperty1'),
+                $this->equalTo('testProperty2')
+            );
+
+        return $dto;
+    }
+
+    /**
+     * Mapping dto provider
+     *
+     * This method return an array of objects and metadatato be used by
+     * the tests
+     *
+     * @return array
+     */
+    public function mappingDtoProvider()
+    {
+        $properties = $this->getMappingProperties();
+
+        $metadata = $this->getMappingMetadata($properties);
+
+        return [
+            [
+                $this->getMappingToDto(),
+                [],
+                $metadata
+            ],
+            [
+                $this->getMappingToDto(2),
+                [],
+                $metadata,
+                [0, 1]
+            ],
+            [
+                $this->getMappingToDto(1),
+                [],
+                $metadata,
+                [0]
+            ]
+        ];
+    }
+
+    /**
+     * Test mapToDto
+     *
+     * This method validate the PropertyAccessMapper mapToDto logic
+     *
+     * @param CSR3DTOInterface        $dto          The base dto
+     * @param mixed                   $mappedObject The current mapped object
+     * @param ObjectMetadataInterface $metadata     The mapping metadatas
+     * @param array                   $groups       The mapping groups
+     *
+     * @return       void
+     * @dataProvider mappingDtoProvider
+     */
+    public function testMapToDto(
+        CSR3DTOInterface $dto,
+        $mappedObject,
+        ObjectMetadataInterface $metadata,
+        array $groups = []
+    ) {
+        $this->assertNull($this->instance->mapToDto($metadata, $dto, $mappedObject, $groups));
+    }
+
+    /**
+     * Test mapToDto exceptions
+     *
+     * This method validate the PropertyAccessMapper::mapToDto logic in case of
+     * unsupported metadata
+     *
+     * @return void
+     */
+    public function testMapToDtoExceptions()
+    {
+        $metadata = $this->createMock(ObjectMetadataInterface::class);
+        $metadata->expects($this->any())
+            ->method('getDtoClass')
+            ->willReturn(CSR3DTOInterface::class);
+        $metadata->expects($this->any())
+            ->method('getMappedClass')
+            ->willReturn('array');
+
+        $this->expectException(MappingException::class);
+
+        $object = $this->createMock(\stdClass::class);
+
+        $this->instance->mapToDto($metadata, $this->createMock(CSR3DTOInterface::class), $object);
     }
 }
