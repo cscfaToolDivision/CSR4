@@ -122,7 +122,7 @@ trait ObjectMetadataTrait
      */
     public function getByMappedProperty(string $mappedProperty)
     {
-        return $this->filterPropertiesByTarget($mappedProperty)[0] ?? null;
+        return ($this->filterPropertiesByTarget($mappedProperty)[0] ?? null);
     }
 
     /**
@@ -244,7 +244,10 @@ trait ObjectMetadataTrait
 
         $iterator = new \CallbackFilterIterator(
             $this,
-            array($filter, MappedPropertyFilter::FILTER_METHOD)
+            [
+             $filter,
+             MappedPropertyFilter::FILTER_METHOD,
+            ]
         );
 
         return iterator_to_array($iterator);

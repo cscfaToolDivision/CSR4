@@ -52,59 +52,59 @@ class ObjectOptionValidatorTest extends TestCase
         $this->assertFalse($instance->isValid($array));
 
         $array = [
-            'dto' => 'test',
-            'class' => 'test'
-        ];
+                  'dto'   => 'test',
+                  'class' => 'test',
+                 ];
         $this->assertTrue($instance->isValid($array));
 
         $array = [
-            'dto' => 'test',
-            'class' => 'test',
-            'mapper' => 'test',
-            'properties' => [],
-            'factory' => 'test'
-        ];
+                  'dto'        => 'test',
+                  'class'      => 'test',
+                  'mapper'     => 'test',
+                  'properties' => [],
+                  'factory'    => 'test',
+                 ];
         $this->assertTrue($instance->isValid($array));
 
         $array = [
-            'dto' => 'test',
-            'class' => 'test',
-            'mapper' => 'test',
-            'properties' => 12,
-            'factory' => 'test'
-        ];
+                  'dto'        => 'test',
+                  'class'      => 'test',
+                  'mapper'     => 'test',
+                  'properties' => 12,
+                  'factory'    => 'test',
+                 ];
         $this->assertFalse($instance->isValid($array));
 
         $array = [
-            'dto' => 'test',
-            'class' => 'test',
-            'mapper' => 'test',
-            'properties' => [
-                []
-            ],
-            'factory' => 'test'
-        ];
+                  'dto'        => 'test',
+                  'class'      => 'test',
+                  'mapper'     => 'test',
+                  'properties' => [
+                                   [],
+                                  ],
+                  'factory'    => 'test',
+                 ];
         $this->assertFalse($instance->isValid($array));
 
         $array = [
-            'dto' => 'test',
-            'class' => 'test',
-            'mapper' => 'test',
-            'properties' => [
-                []
-            ],
-            'factory' => 'test'
-        ];
+                  'dto'        => 'test',
+                  'class'      => 'test',
+                  'mapper'     => 'test',
+                  'properties' => [
+                                   [],
+                                  ],
+                  'factory'    => 'test',
+                 ];
         $this->assertTrue($instance->isValid($array));
 
         $array = [
-            'dto' => 'test',
-            'class' => 'test',
-            'mapper' => 'test',
-            'properties' => [],
-            'factory' => 'test',
-            'other' => 'fail'
-        ];
+                  'dto'        => 'test',
+                  'class'      => 'test',
+                  'mapper'     => 'test',
+                  'properties' => [],
+                  'factory'    => 'test',
+                  'other'      => 'fail',
+                 ];
         $this->assertFalse($instance->isValid($array));
     }
 }

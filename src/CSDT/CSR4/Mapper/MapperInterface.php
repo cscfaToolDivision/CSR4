@@ -47,7 +47,7 @@ interface MapperInterface extends ConfidenceInterface
     public function mapToObject(
         ObjectMetadataInterface $metadata,
         CSR3DTOInterface $dto,
-        $mappedObject,
+        &$mappedObject,
         array $group = []
     );
 
@@ -63,10 +63,10 @@ interface MapperInterface extends ConfidenceInterface
      *
      * @return void
      */
-    public function mapToDTO(
+    public function mapToDto(
         ObjectMetadataInterface $metadata,
         CSR3DTOInterface $dto,
-        $mappedObject,
+        &$mappedObject,
         array $group = []
     );
 

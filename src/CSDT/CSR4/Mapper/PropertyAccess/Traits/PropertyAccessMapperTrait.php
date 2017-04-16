@@ -54,11 +54,11 @@ trait PropertyAccessMapperTrait
     public function mapToObject(
         ObjectMetadataInterface $metadata,
         CSR3DTOInterface $dto,
-        $mappedObject,
+        &$mappedObject,
         array $group = []
     ) {
         if (!$this->support($metadata, $dto, $mappedObject)) {
-            throw new MappingException();
+            throw new MappingException('Unsupported metadata given');
         }
 
         $accessor = new PropertyAccessor();
@@ -100,14 +100,14 @@ trait PropertyAccessMapperTrait
      *
      * @return void
      */
-    public function mapToDTO(
+    public function mapToDto(
         ObjectMetadataInterface $metadata,
         CSR3DTOInterface $dto,
-        $mappedObject,
+        &$mappedObject,
         array $group = []
     ) {
         if (!$this->support($metadata, $dto, $mappedObject)) {
-            throw new MappingException();
+            throw new MappingException('Unsupported metadata given');
         }
 
         $accessor = new PropertyAccessor();
@@ -229,8 +229,8 @@ trait PropertyAccessMapperTrait
      * @return void
      */
     private function mapProperty(
-        $container,
-        $receiver,
+        &$container,
+        &$receiver,
         string $containerProperty,
         string $receiverProperty,
         PropertyAccessorInterface $accessor,
@@ -291,9 +291,9 @@ trait PropertyAccessMapperTrait
             && !empty($transformer)
         ) {
             return [
-                $this->getTransformerResolver()->resolve($transformer),
-                $method
-            ];
+                    $this->getTransformerResolver()->resolve($transformer),
+                    $method,
+                   ];
         }
 
         if (!empty($transformer)) {

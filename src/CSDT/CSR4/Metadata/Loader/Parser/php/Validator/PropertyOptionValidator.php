@@ -49,7 +49,12 @@ class PropertyOptionValidator
             count(
                 array_diff(
                     array_keys($property),
-                    ['target', 'property', 'transformer', 'group']
+                    [
+                     'target',
+                     'property',
+                     'transformer',
+                     'group',
+                    ]
                 )
             )
         );

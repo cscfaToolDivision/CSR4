@@ -69,13 +69,13 @@ class ClassTransformerLoaderTest extends TestCase
     public function testSupport()
     {
         $classNames = [
-            ConfidenceInterface::MEDIUM_CONFIDENCE => FixtureTransformer::class,
-            ConfidenceInterface::LOW_CONFIDENCE => OptionalFixtureTransformer::class,
-            ConfidenceInterface::UNSUPPORTED_CONFIDENCE => RequiredFixtureTransformer::class,
-            ConfidenceInterface::UNSUPPORTED_CONFIDENCE => 'test',
-            ConfidenceInterface::UNSUPPORTED_CONFIDENCE => 12,
-            ConfidenceInterface::UNSUPPORTED_CONFIDENCE => (new \stdClass())
-        ];
+                       ConfidenceInterface::MEDIUM_CONFIDENCE      => FixtureTransformer::class,
+                       ConfidenceInterface::LOW_CONFIDENCE         => OptionalFixtureTransformer::class,
+                       ConfidenceInterface::UNSUPPORTED_CONFIDENCE => RequiredFixtureTransformer::class,
+                       ConfidenceInterface::UNSUPPORTED_CONFIDENCE => 'test',
+                       ConfidenceInterface::UNSUPPORTED_CONFIDENCE => 12,
+                       ConfidenceInterface::UNSUPPORTED_CONFIDENCE => (new \stdClass()),
+                      ];
 
         foreach ($classNames as $expectedConfidence => $class) {
             $this->assertEquals(
@@ -119,10 +119,10 @@ class ClassTransformerLoaderTest extends TestCase
     public function loadFailureProvider()
     {
         return [
-            [RequiredFixtureTransformer::class],
-            ['test'],
-            [12]
-        ];
+                [RequiredFixtureTransformer::class],
+                ['test'],
+                [12],
+               ];
     }
 
     /**

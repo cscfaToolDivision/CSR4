@@ -51,7 +51,7 @@ class ResolverFactory
 
         $resolver->setAllowedTypes('property', 'string')
             ->setAllowedTypes('target', 'string')
-            ->setAllowedTypes('transformer', array('string', 'null'))
+            ->setAllowedTypes('transformer', ['string', 'null'])
             ->setAllowedTypes('group', 'array');
 
         $resolver->setAllowedValues(
@@ -84,8 +84,8 @@ class ResolverFactory
 
         $resolver->setAllowedTypes('class', 'string')
             ->setAllowedTypes('dto', 'string')
-            ->setAllowedTypes('mapper', array('string', 'null'))
-            ->setAllowedTypes('factory', array('string', 'null'))
+            ->setAllowedTypes('mapper', ['string', 'null'])
+            ->setAllowedTypes('factory', ['string', 'null'])
             ->setAllowedTypes('properties', 'array');
 
         return $resolver;

@@ -56,20 +56,20 @@ class PhpMetadataParserTest extends TestCase
         $this->expectException(UnsupportedMetadataException::class);
 
         $metadata = [
-            [
-                'class' => 'class_name',
-                'mapper' => 'mapper_class',
-                'factory' => 'factoryIdentifyer',
-                'properties' => [
-                    [
-                        'property' => 'property_name',
-                        'target' => 'target_property_name',
-                        'transformer' => 'data_transformer',
-                        'group' => ['group...']
-                    ]
-                ]
-            ]
-        ];
+                     [
+                      'class'      => 'class_name',
+                      'mapper'     => 'mapper_class',
+                      'factory'    => 'factoryIdentifyer',
+                      'properties' => [
+                                       [
+                                        'property'    => 'property_name',
+                                        'target'      => 'target_property_name',
+                                        'transformer' => 'data_transformer',
+                                        'group'       => ['group...'],
+                                       ],
+                                      ],
+                     ],
+                    ];
 
         $instance->parse($metadata);
     }
@@ -91,21 +91,21 @@ class PhpMetadataParserTest extends TestCase
         $instance = new PhpMetadataParser(new ResolverFactory(), $optionValidator);
 
         $metadata = [
-            [
-                'dto' => 'dto_class_name',
-                'class' => 'class_name',
-                'mapper' => 'mapper_class',
-                'factory' => 'factoryIdentifyer',
-                'properties' => [
-                    [
-                        'property' => 'property_name',
-                        'target' => 'target_property_name',
-                        'transformer' => 'data_transformer',
-                        'group' => ['group...']
-                    ]
-                ]
-            ]
-        ];
+                     [
+                      'dto'        => 'dto_class_name',
+                      'class'      => 'class_name',
+                      'mapper'     => 'mapper_class',
+                      'factory'    => 'factoryIdentifyer',
+                      'properties' => [
+                                       [
+                                        'property'    => 'property_name',
+                                        'target'      => 'target_property_name',
+                                        'transformer' => 'data_transformer',
+                                        'group'       => ['group...'],
+                                       ],
+                                      ],
+                     ],
+                    ];
 
         $objects = $instance->parse($metadata);
 
@@ -130,10 +130,10 @@ class PhpMetadataParserTest extends TestCase
     {
         $this->validateProperties(
             [
-                'dtoClass' => 'dto_class_name',
-                'mappedClass' => 'class_name',
-                'dtoMapper' => 'mapper_class',
-                'objectFactory' => 'factoryIdentifyer',
+             'dtoClass'      => 'dto_class_name',
+             'mappedClass'   => 'class_name',
+             'dtoMapper'     => 'mapper_class',
+             'objectFactory' => 'factoryIdentifyer',
             ],
             $object,
             AbstractObjectMetadata::class
@@ -167,10 +167,10 @@ class PhpMetadataParserTest extends TestCase
     {
         $this->validateProperties(
             [
-                'property' => 'property_name',
-                'targetProperty' => 'target_property_name',
-                'dataTransformer' => 'data_transformer',
-                'mappingGroup' => ['group...'],
+             'property'        => 'property_name',
+             'targetProperty'  => 'target_property_name',
+             'dataTransformer' => 'data_transformer',
+             'mappingGroup'    => ['group...'],
             ],
             $property,
             AbstractObjectPropertyMetadata::class

@@ -44,7 +44,10 @@ class ObjectPropertyMetadataTest extends TestCase
     {
         $property = 'property';
         $targetProperty = 'target';
-        $mappingGroup = ['default', 'test'];
+        $mappingGroup = [
+                         'default',
+                         'test',
+                        ];
         $dataTransformer = 'transformer';
 
         $instance = new ObjectPropertyMetadata($property, $targetProperty);
@@ -58,7 +61,11 @@ class ObjectPropertyMetadataTest extends TestCase
         $this->assertEquals($targetProperty, $instance->getTargetProperty());
         $this->assertEquals($property, $instance->getProperty());
 
-        $instance = new ObjectPropertyMetadata($property, $targetProperty, $mappingGroup);
+        $instance = new ObjectPropertyMetadata(
+            $property,
+            $targetProperty,
+            $mappingGroup
+        );
         $this->assertTargetProperty($instance, $targetProperty);
         $this->assertProperty($instance, $property);
         $this->assertMappingGroup($instance, $mappingGroup);
@@ -110,7 +117,10 @@ class ObjectPropertyMetadataTest extends TestCase
         $reflex = new \ReflectionClass(ObjectPropertyMetadata::class);
         $instance = $reflex->newInstanceWithoutConstructor();
 
-        $mappingGroup = ['default', 'test'];
+        $mappingGroup = [
+                         'default',
+                         'test',
+                        ];
 
         $transformer = $this->getReflexMappingGroup();
         $transformer->setValue($instance, $mappingGroup);

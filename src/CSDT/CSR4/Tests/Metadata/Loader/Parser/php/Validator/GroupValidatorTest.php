@@ -60,17 +60,17 @@ class GroupValidatorTest extends TestCase
      */
     public function testIsValid()
     {
-        $validArray = array(
-            'string1',
-            'string2',
-            'string3'
-        );
+        $validArray = [
+                       'string1',
+                       'string2',
+                       'string3',
+                      ];
 
-        $invalidArray = array(
-            'string1',
-            12,
-            'string3'
-        );
+        $invalidArray = [
+                         'string1',
+                         12,
+                         'string3',
+                        ];
 
         $this->assertTrue($this->instance->isValid($validArray));
         $this->assertFalse($this->instance->isValid($invalidArray));

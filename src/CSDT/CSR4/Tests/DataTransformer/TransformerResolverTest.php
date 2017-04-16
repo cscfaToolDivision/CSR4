@@ -125,12 +125,12 @@ class TransformerResolverTest extends TestCase
             ->willReturn(ConfidenceInterface::DEDICATED_CONFIDENCE);
 
         return [
-            ConfidenceInterface::UNSUPPORTED_CONFIDENCE => $loaderUnsupported,
-            ConfidenceInterface::LOW_CONFIDENCE => $loaderLow,
-            ConfidenceInterface::MEDIUM_CONFIDENCE => $loaderMedium,
-            ConfidenceInterface::HIGH_CONFIDENCE => $loaderHight,
-            ConfidenceInterface::DEDICATED_CONFIDENCE => $loaderDedicated
-        ];
+                ConfidenceInterface::UNSUPPORTED_CONFIDENCE => $loaderUnsupported,
+                ConfidenceInterface::LOW_CONFIDENCE         => $loaderLow,
+                ConfidenceInterface::MEDIUM_CONFIDENCE      => $loaderMedium,
+                ConfidenceInterface::HIGH_CONFIDENCE        => $loaderHight,
+                ConfidenceInterface::DEDICATED_CONFIDENCE   => $loaderDedicated,
+               ];
     }
 
     /**

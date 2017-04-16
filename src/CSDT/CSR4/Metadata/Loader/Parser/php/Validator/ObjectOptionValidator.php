@@ -76,7 +76,13 @@ class ObjectOptionValidator
             count(
                 array_diff(
                     array_keys($option),
-                    ['dto', 'class', 'mapper', 'factory', 'properties']
+                    [
+                     'dto',
+                     'class',
+                     'mapper',
+                     'factory',
+                     'properties',
+                    ]
                 )
             )
         );

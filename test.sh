@@ -42,16 +42,13 @@ then
     mkdir -p "doc"
 fi
 
-runner "$PHP vendor/bin/phpcbf src/"
-echo "$TEST_RES" > doc/phpcbf.txt
-
-runner "$PHP vendor/bin/phpcbf --standard=PSR2 src/"
+runner "$PHP vendor/bin/phpcbf --standard=./csruleset.xml src/"
 echo "$TEST_RES" >> doc/phpcbf.txt
 
 test "$PHP vendor/bin/phpunit" PHPUnit 100
 echo "$TEST_RES" > doc/phpunit.txt
 
-test "$PHP vendor/bin/phpcs --standard=PSR2 src/" PHPCS 100
+test "$PHP vendor/bin/phpcs --standard=./csruleset.xml src/" PHPCS 100
 echo "$TEST_RES" > doc/phpcs.txt
 
 test "$PHP vendor/bin/phpmd src/ text ./phpmd.xml" PHPMD 100

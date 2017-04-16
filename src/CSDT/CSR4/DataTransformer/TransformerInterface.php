@@ -50,5 +50,5 @@ interface TransformerInterface
      *
      * @return mixed
      */
-    public function transformForDTO($data);
+    public function transformForDto($data);
 }

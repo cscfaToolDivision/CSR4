@@ -71,7 +71,7 @@ class MetadataLoaderTest extends TestCase
      */
     public function testParserSupport()
     {
-        $result = array($this->createMock(ObjectMetadataInterface::class));
+        $result = [$this->createMock(ObjectMetadataInterface::class)];
 
         $parser = $this->createMock(MetadataFormatParserInterface::class);
         $parser->expects($this->once())
@@ -107,7 +107,7 @@ class MetadataLoaderTest extends TestCase
      */
     public function testMulitpleParser()
     {
-        $result = array($this->createMock(ObjectMetadataInterface::class));
+        $result = [$this->createMock(ObjectMetadataInterface::class)];
 
         $parserAvailable = $this->createMock(MetadataFormatParserInterface::class);
         $parserAvailable->expects($this->once())
@@ -149,7 +149,7 @@ class MetadataLoaderTest extends TestCase
      */
     public function testNewCacheDebug()
     {
-        $result = array($this->createMock(ObjectMetadataInterface::class));
+        $result = [$this->createMock(ObjectMetadataInterface::class)];
         $cache = $this->createMock(CacheItemPoolInterface::class);
 
         $cache->expects($this->never())
@@ -190,7 +190,7 @@ class MetadataLoaderTest extends TestCase
      */
     public function testNewCache()
     {
-        $result = array($this->createMock(ObjectMetadataInterface::class));
+        $result = [$this->createMock(ObjectMetadataInterface::class)];
         $cache = $this->createMock(CacheItemPoolInterface::class);
         $cacheItem = $this->createMock(CacheItemInterface::class);
 
@@ -243,7 +243,7 @@ class MetadataLoaderTest extends TestCase
      */
     public function testCache()
     {
-        $result = array($this->createMock(ObjectMetadataInterface::class));
+        $result = [$this->createMock(ObjectMetadataInterface::class)];
         $cache = $this->createMock(CacheItemPoolInterface::class);
         $cacheItem = $this->createMock(CacheItemInterface::class);
 
@@ -293,7 +293,7 @@ class MetadataLoaderTest extends TestCase
      */
     public function testParseResource()
     {
-        $result = array($this->createMock(ObjectMetadataInterface::class));
+        $result = [$this->createMock(ObjectMetadataInterface::class)];
         $cache = $this->createMock(CacheItemPoolInterface::class);
         $cacheItem = $this->createMock(CacheItemInterface::class);
 

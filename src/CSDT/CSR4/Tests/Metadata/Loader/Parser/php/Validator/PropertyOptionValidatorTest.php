@@ -65,26 +65,26 @@ class PropertyOptionValidatorTest extends TestCase
         $this->assertFalse($this->instance->isValid($array));
 
         $array = [
-            'property' => 'test',
-            'target' => 'test'
-        ];
+                  'property' => 'test',
+                  'target'   => 'test',
+                 ];
         $this->assertTrue($this->instance->isValid($array));
 
         $array = [
-            'property' => 'test',
-            'target' => 'test',
-            'transformer' => 'test',
-            'group' => []
-        ];
+                  'property'    => 'test',
+                  'target'      => 'test',
+                  'transformer' => 'test',
+                  'group'       => [],
+                 ];
         $this->assertTrue($this->instance->isValid($array));
 
         $array = [
-            'property' => 'test',
-            'target' => 'test',
-            'transformer' => 'test',
-            'group' => [],
-            'other' => 'fail'
-        ];
+                  'property'    => 'test',
+                  'target'      => 'test',
+                  'transformer' => 'test',
+                  'group'       => [],
+                  'other'       => 'fail',
+                 ];
         $this->assertFalse($this->instance->isValid($array));
     }
 }

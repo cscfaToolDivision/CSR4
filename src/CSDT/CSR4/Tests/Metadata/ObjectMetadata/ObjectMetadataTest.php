@@ -240,7 +240,7 @@ class ObjectMetadataTest extends TestCase
      */
     private function getProperties()
     {
-        $properties = array();
+        $properties = [];
         for ($i = 0; $i < 3; $i++) {
             $target = sprintf('%s%i', 'property', $i);
 
