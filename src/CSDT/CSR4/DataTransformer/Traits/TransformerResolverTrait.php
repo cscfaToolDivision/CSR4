@@ -74,13 +74,7 @@ trait TransformerResolverTrait
     {
         $loader = $this->getUpperConfidenceLoader($transformer);
 
-        if ($loader instanceof TransformerLoaderInterface) {
-            return $loader->load($transformer);
-        }
-
-        throw new UnsupportedTransformerException(
-            'No loader found for transformer'
-        );
+        return $loader->load($transformer);
     }
 
     /**
