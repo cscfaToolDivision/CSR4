@@ -32,6 +32,15 @@ use CSDT\CSR4\Metadata\ObjectMetadata\Filter\MappedPropertyFilter;
 trait ObjectMetadataTrait
 {
     /**
+     * Dto class container
+     *
+     * This property store the dto class container property name
+     *
+     * @var string
+     */
+    protected $dtoClassContainer = 'dtoClass';
+
+    /**
      * Property container
      *
      * This property store the metadata properties container property name
@@ -79,6 +88,18 @@ trait ObjectMetadataTrait
     protected $dtoMapperContainer = 'dtoMapper';
 
     /**
+     * Get dto class
+     *
+     * This method return the DTO class defined by the metadata
+     *
+     * @return string
+     */
+    public function getDtoClass() : string
+    {
+        return $this->{$this->dtoClassContainer};
+    }
+
+    /**
      * Get mapped class
      *
      * This method return the DTO mapped class defined by the metadata
@@ -101,7 +122,7 @@ trait ObjectMetadataTrait
      */
     public function getByMappedProperty(string $mappedProperty)
     {
-        return $this->filterPropertiesByTarget($mappedProperty)[0] ?? null;
+        return ($this->filterPropertiesByTarget($mappedProperty)[0] ?? null);
     }
 
     /**
@@ -223,7 +244,10 @@ trait ObjectMetadataTrait
 
         $iterator = new \CallbackFilterIterator(
             $this,
-            array($filter, MappedPropertyFilter::FILTER_METHOD)
+            [
+             $filter,
+             MappedPropertyFilter::FILTER_METHOD,
+            ]
         );
 
         return iterator_to_array($iterator);

@@ -58,6 +58,15 @@ abstract class AbstractObjectPropertyMetadata implements ObjectPropertyMetadataI
      */
     private $targetProperty;
 
+    /**
+     * Property
+     *
+     * This property store the mapping property name
+     *
+     * @var string
+     */
+    private $property;
+
     use ObjectPropertyMetadataTrait;
 
     /**
@@ -65,6 +74,7 @@ abstract class AbstractObjectPropertyMetadata implements ObjectPropertyMetadataI
      *
      * The default AbstractObjectPropertyMetadata constructor
      *
+     * @param string $property        The mapped property name
      * @param string $targetProperty  The mapped target property name
      * @param array  $mappingGroup    The mapping groups of the property
      * @param string $dataTransformer The mapping data transformer identifyer
@@ -72,6 +82,7 @@ abstract class AbstractObjectPropertyMetadata implements ObjectPropertyMetadataI
      * @return void
      */
     public function __construct(
+        string $property,
         string $targetProperty,
         array $mappingGroup = [],
         string $dataTransformer = null
@@ -79,5 +90,6 @@ abstract class AbstractObjectPropertyMetadata implements ObjectPropertyMetadataI
         $this->dataTransformer = $dataTransformer;
         $this->mappingGroup = $mappingGroup;
         $this->targetProperty = $targetProperty;
+        $this->property = $property;
     }
 }

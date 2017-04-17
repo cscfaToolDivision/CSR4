@@ -42,30 +42,43 @@ class ObjectPropertyMetadataTest extends TestCase
      */
     public function testConstructor()
     {
+        $property = 'property';
         $targetProperty = 'target';
-        $mappingGroup = ['default', 'test'];
+        $mappingGroup = [
+                         'default',
+                         'test',
+                        ];
         $dataTransformer = 'transformer';
 
-        $instance = new ObjectPropertyMetadata($targetProperty);
+        $instance = new ObjectPropertyMetadata($property, $targetProperty);
         $this->assertTargetProperty($instance, $targetProperty);
+        $this->assertProperty($instance, $property);
         $this->assertMappingGroup($instance);
         $this->assertDataTransformer($instance);
 
         $this->assertNull($instance->getMappedTransformer());
         $this->assertTrue(is_array($instance->getMappingGroup()));
         $this->assertEquals($targetProperty, $instance->getTargetProperty());
+        $this->assertEquals($property, $instance->getProperty());
 
-        $instance = new ObjectPropertyMetadata($targetProperty, $mappingGroup);
+        $instance = new ObjectPropertyMetadata(
+            $property,
+            $targetProperty,
+            $mappingGroup
+        );
         $this->assertTargetProperty($instance, $targetProperty);
+        $this->assertProperty($instance, $property);
         $this->assertMappingGroup($instance, $mappingGroup);
         $this->assertDataTransformer($instance);
 
         $instance = new ObjectPropertyMetadata(
+            $property,
             $targetProperty,
             $mappingGroup,
             $dataTransformer
         );
         $this->assertTargetProperty($instance, $targetProperty);
+        $this->assertProperty($instance, $property);
         $this->assertMappingGroup($instance, $mappingGroup);
         $this->assertDataTransformer($instance, $dataTransformer);
     }
@@ -104,12 +117,36 @@ class ObjectPropertyMetadataTest extends TestCase
         $reflex = new \ReflectionClass(ObjectPropertyMetadata::class);
         $instance = $reflex->newInstanceWithoutConstructor();
 
-        $mappingGroup = ['default', 'test'];
+        $mappingGroup = [
+                         'default',
+                         'test',
+                        ];
 
         $transformer = $this->getReflexMappingGroup();
         $transformer->setValue($instance, $mappingGroup);
 
         $this->assertEquals($mappingGroup, $instance->getMappingGroup());
+    }
+
+    /**
+     * Test getProperty
+     *
+     * This method validate the logic of the ObjectPropertyMetadata
+     * getProperty method
+     *
+     * @return void
+     */
+    public function testGetProperty()
+    {
+        $reflex = new \ReflectionClass(ObjectPropertyMetadata::class);
+        $instance = $reflex->newInstanceWithoutConstructor();
+
+        $property = 'property';
+
+        $transformer = $this->getReflexProperty();
+        $transformer->setValue($instance, $property);
+
+        $this->assertEquals($property, $instance->getProperty());
     }
 
     /**
@@ -188,6 +225,37 @@ class ObjectPropertyMetadataTest extends TestCase
     }
 
     /**
+     * Assert property
+     *
+     * This method assert the property value property
+     *
+     * @param ObjectPropertyMetadata $instance The tested instance
+     * @param string                 $value    The expected value
+     *
+     * @return void
+     */
+    private function assertProperty(
+        ObjectPropertyMetadata $instance,
+        string $value
+    ) {
+        $reflex = $this->getReflexProperty();
+        $this->assertEquals($value, $reflex->getValue($instance));
+    }
+
+    /**
+     * Get reflex property
+     *
+     * This method return an accessible reflection property of the property
+     * property
+     *
+     * @return \ReflectionProperty
+     */
+    private function getReflexProperty()
+    {
+        return $this->getReflex('property');
+    }
+
+    /**
      * Get reflex targetProperty
      *
      * This method return an accessible reflection property of the targetProperty
@@ -231,6 +299,8 @@ class ObjectPropertyMetadataTest extends TestCase
      *
      * This method return an accessible reflection property of the given
      * property name
+     *
+     * @param string $property The property name for reflection generation
      *
      * @return \ReflectionProperty
      */

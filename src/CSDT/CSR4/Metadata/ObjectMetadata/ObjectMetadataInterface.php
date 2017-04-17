@@ -30,6 +30,14 @@ use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface;
  */
 interface ObjectMetadataInterface extends \Iterator
 {
+    /**
+     * Get dto class
+     *
+     * This method return the DTO class defined by the metadata
+     *
+     * @return string
+     */
+    public function getDtoClass() : string ;
 
     /**
      * Get mapped class

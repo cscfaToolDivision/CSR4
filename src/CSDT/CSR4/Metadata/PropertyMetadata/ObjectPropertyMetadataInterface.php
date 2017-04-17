@@ -55,4 +55,13 @@ interface ObjectPropertyMetadataInterface
      * @return string
      */
     public function getTargetProperty() : string ;
+
+    /**
+     * Get property
+     *
+     * This method return the property of the property metadata
+     *
+     * @return string
+     */
+    public function getProperty() : string ;
 }
