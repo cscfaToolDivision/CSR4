@@ -26,6 +26,7 @@ use CSDT\CSR4\Tests\Mapper\PropertyAccess\Misc\MiscMappedObject;
 use CSDT\CSR4\DataTransformer\TransformerResolverInterface;
 use CSDT\CSR4\DataTransformer\TransformerInterface;
 use CSDT\CSR4\Tests\Mapper\PropertyAccess\Misc\NoTransformerMapper;
+use CSDT\CSR4\Mapper\UnsupportedMappedPropertyException;
 
 /**
  * PropertyAccessMapperTest.php
