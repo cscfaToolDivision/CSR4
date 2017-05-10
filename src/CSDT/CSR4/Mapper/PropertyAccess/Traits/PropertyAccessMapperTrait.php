@@ -287,9 +287,7 @@ trait PropertyAccessMapperTrait
      */
     private function getPropertyTransformerCallable($transformer, string $method)
     {
-        if ($this instanceof TransformerResolverAwareInterface
-            && !empty($transformer)
-        ) {
+        if ($this instanceof TransformerResolverAwareInterface && !empty($transformer)) {
             return [
                     $this->getTransformerResolver()->resolve($transformer),
                     $method,
