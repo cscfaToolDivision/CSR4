@@ -76,7 +76,6 @@ trait MetadataResolverTrait
                 $exception
             );
         }
-
     }
 
     /**
@@ -104,12 +103,7 @@ trait MetadataResolverTrait
             return ConfidenceInterface::HIGH_CONFIDENCE;
         }
 
-        if (
-            in_array(
-                $className,
-                class_implements(get_class($instance))
-            )
-        ) {
+        if (in_array($className, class_implements(get_class($instance)))) {
             return ConfidenceInterface::MEDIUM_CONFIDENCE;
         }
 
