@@ -32,7 +32,7 @@ use CSDT\CSR4\Mapper\Manager\Resolver\Exception\UnresolvableFactoryException;
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-class FactoryResolverTrait
+trait FactoryResolverTrait
 {
     /**
      * Resolve factory
