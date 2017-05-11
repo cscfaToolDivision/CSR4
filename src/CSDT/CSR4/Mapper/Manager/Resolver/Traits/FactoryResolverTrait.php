@@ -7,30 +7,32 @@
  *
  * PHP version 7.0
  *
- * @category Mapper
+ * @category MapperResolver
  * @package  CSR4-ObjectMappedDTO
  * @author   matthieu vallance <matthieu.vallance@cscfa.fr>
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-namespace CSDT\CSR4\Mapper\Manager\Resolver;
+namespace CSDT\CSR4\Mapper\Manager\Resolver\Traits;
 
-use CSDT\CSR4\Mapper\Manager\ObjectMappingFactoryInterface;
-use CSDT\CSR3\Interfaces\CSR3DTOInterface;
 use CSDT\CSR4\Metadata\ObjectMetadata\ObjectMetadataInterface;
+use CSDT\CSR3\Interfaces\CSR3DTOInterface;
+use CSDT\CSR4\Mapper\Manager\ObjectMappingFactoryInterface;
+use CSDT\CSR4\ConfidenceInterface;
+use CSDT\CSR4\Mapper\Manager\Resolver\Exception\UnresolvableFactoryException;
 
 /**
- * FactoryResolverInterface.php
+ * FactoryResolverTrait.php
  *
- * This interface define the base FactoryResolver methods
+ * This class is used to resolve the factory to be used when an object need to be created
  *
- * @category Mapper
+ * @category MapperResolver
  * @package  CSR4-ObjectMappedDTO
  * @author   matthieu vallance <matthieu.vallance@cscfa.fr>
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-interface FactoryResolverInterface
+class FactoryResolverTrait
 {
     /**
      * Resolve factory
@@ -48,5 +50,26 @@ interface FactoryResolverInterface
         \SplObjectStorage $factories,
         ObjectMetadataInterface $metadata,
         CSR3DTOInterface $dto
-    ) : ObjectMappingFactoryInterface ;
+    ) : ObjectMappingFactoryInterface {
+
+        $factoryQueue = new \SplPriorityQueue();
+
+        foreach ($factories as $factory) {
+            $supportLevel = $factory->support($metadata, $dto);
+
+            if ($supportLevel > ConfidenceInterface::UNSUPPORTED_CONFIDENCE) {
+                $factoryQueue->insert($factory, $supportLevel);
+            }
+        }
+
+        try {
+            return $factoryQueue->extract();
+        } catch (\RuntimeException $exception) {
+            throw new UnresolvableFactoryException(
+                'No factory found for metadata',
+                null,
+                $exception
+            );
+        }
+    }
 }

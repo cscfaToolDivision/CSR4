@@ -348,6 +348,7 @@ class GenericMapperManagerTest extends TestCase
         $resolver->expects($this->once())
             ->method('resolveFactory')
             ->with(
+                $this->identicalTo($spl),
                 $this->identicalTo($meta),
                 $this->identicalTo($dto)
             )->willReturn($factory);

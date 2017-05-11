@@ -57,7 +57,7 @@ trait MetadataResolverTrait
             $objectClass = $metadata->getMappedClass();
 
             $supportConfidence = $this->getClassConfidence($dtoClass, $dto);
-            $supportConfidence += $this->getDtoConfidence(
+            $supportConfidence += $this->getClassConfidence(
                 $objectClass,
                 $mappedObject
             );
@@ -89,12 +89,8 @@ trait MetadataResolverTrait
      *
      * @return number
      */
-    private function getClassConfidence(string $className, $instance = null)
+    private function getClassConfidence(string $className, $instance)
     {
-        if ($instance === null) {
-            return ConfidenceInterface::UNSUPPORTED_CONFIDENCE;
-        }
-
         if (hash_equals($className, get_class($instance))) {
             return ConfidenceInterface::DEDICATED_CONFIDENCE;
         }

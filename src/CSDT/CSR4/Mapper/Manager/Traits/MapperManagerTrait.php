@@ -319,7 +319,7 @@ trait MapperManagerTrait
 
         if ($mappedObject === null) {
             $factory = $this->{$this->factoryResolverContainer}
-                ->resolveFactory($metadata, $dto);
+                ->resolveFactory($this->{$this->factoriesContainer}, $metadata, $dto);
 
             $mappedObject = $factory->newInstance($dto, $metadata);
         }
