@@ -291,9 +291,9 @@ trait PropertyAccessMapperTrait
     {
         if ($this instanceof TransformerResolverAwareInterface && !empty($transformer)) {
             return [
-                    $this->getTransformerResolver()->resolve($transformer),
-                    $method,
-                   ];
+                $this->getTransformerResolver()->resolve($transformer),
+                $method,
+            ];
         }
 
         if (!empty($transformer)) {
@@ -320,21 +320,25 @@ trait PropertyAccessMapperTrait
         CSR3DTOInterface $dto,
         $mappedObject
     ) {
-        $dtoSupport = hash_equals($metadata->getDtoClass(), get_class($dto)) ||
-            in_array($metadata->getDtoClass(), class_parents(get_class($dto))) ||
-            in_array($metadata->getDtoClass(), class_implements(get_class($dto)));
+        $metaDtoClass = $metadata->getDtoClass();
+        $dtoClass = get_class($dto);
+        $mappedClass = $metadata->getMappedClass();
 
-        $classSupport = (gettype($mappedObject) == $metadata->getMappedClass()) ||
+        $dtoSupport = hash_equals($metaDtoClass, $dtoClass) ||
+            in_array($metaDtoClass, class_parents($dtoClass)) ||
+            in_array($metaDtoClass, class_implements($dtoClass));
+
+        $classSupport = (gettype($mappedObject) == $mappedClass) ||
             hash_equals(
-                $metadata->getMappedClass(),
+                $mappedClass,
                 get_class($mappedObject)
             ) ||
             in_array(
-                $metadata->getMappedClass(),
+                $mappedClass,
                 class_parents(get_class($mappedObject))
             ) ||
             in_array(
-                $metadata->getMappedClass(),
+                $mappedClass,
                 class_implements(get_class($mappedObject))
             );
 
