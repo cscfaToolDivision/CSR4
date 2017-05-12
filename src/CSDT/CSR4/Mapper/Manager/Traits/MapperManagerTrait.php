@@ -222,7 +222,7 @@ trait MapperManagerTrait
      */
     public function addMetadata(ObjectMetadataInterface $metadata)
     {
-        if ($this->{$this->metadatasContainer}->contains($metadata)) {
+        if (!$this->{$this->metadatasContainer}->contains($metadata)) {
             $this->{$this->metadatasContainer}->attach($metadata);
         }
 
@@ -243,7 +243,7 @@ trait MapperManagerTrait
      *
      * @return mixed
      */
-    public function mapToObject(CSR3DTOInterface $dto, $mappedObject = null, array $group = [])
+    public function mapToObject(CSR3DTOInterface $dto, &$mappedObject = null, array $group = [])
     {
         $metadata = $this->getMetadata($dto, $mappedObject);
         $mappedObject = $this->getMappedObject($dto, $metadata, $mappedObject);
@@ -264,7 +264,7 @@ trait MapperManagerTrait
      *
      * @return mixed
      */
-    public function mapToDto(CSR3DTOInterface $dto, $mappedObject, array $group = [])
+    public function mapToDto(CSR3DTOInterface $dto, &$mappedObject, array $group = [])
     {
         $metadata = $this->getMetadata($dto, $mappedObject);
         $mapper = $this->getMapper($dto, $metadata, $mappedObject);

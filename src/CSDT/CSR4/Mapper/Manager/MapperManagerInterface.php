@@ -15,7 +15,6 @@
  */
 namespace CSDT\CSR4\Mapper\Manager;
 
-use CSDT\CSR4\DataTransformer\TransformerResolverAwareInterface;
 use CSDT\CSR4\Mapper\MapperInterface;
 use CSDT\CSR4\Metadata\ObjectMetadata\ObjectMetadataInterface;
 use CSDT\CSR3\Interfaces\CSR3DTOInterface;
@@ -95,7 +94,7 @@ interface MapperManagerInterface
      *
      * @return mixed
      */
-    public function mapToObject(CSR3DTOInterface $dto, $mappedObject = null, array $group = []);
+    public function mapToObject(CSR3DTOInterface $dto, &$mappedObject = null, array $group = []);
 
     /**
      * Map to dto
@@ -109,5 +108,5 @@ interface MapperManagerInterface
      *
      * @return mixed
      */
-    public function mapToDto(CSR3DTOInterface $dto, $mappedObject, array $group = []);
+    public function mapToDto(CSR3DTOInterface $dto, &$mappedObject, array $group = []);
 }

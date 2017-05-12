@@ -44,7 +44,6 @@ interface ObjectMappingFactoryInterface extends ConfidenceInterface
      */
     public function newInstance(CSR3DTOInterface $dto, ObjectMetadataInterface $metadata);
 
-
      /**
       * Support
       *

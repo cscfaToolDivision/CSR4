@@ -84,8 +84,17 @@ class GenericMetadataResolverTest extends TestCase
             ->method('getMappedClass')
             ->willReturn(MiscMappedObject::class);
 
+        $metadata3 = $this->createMock(ObjectMetadataInterface::class);
+        $metadata3->expects($this->any())
+            ->method('getDtoClass')
+            ->willReturn(CSR3DTOInterface::class);
+        $metadata3->expects($this->any())
+            ->method('getMappedClass')
+            ->willReturn('array');
+
         $metadatas->attach($metadata1);
         $metadatas->attach($metadata2);
+        $metadatas->attach($metadata3);
 
         return [
             [
@@ -105,6 +114,12 @@ class GenericMetadataResolverTest extends TestCase
                 $metadatas,
                 new MiscMappedObject(null, null, null),
                 $metadata2
+            ],
+            [
+                $this->createMock(CSR3DTOInterface::class),
+                $metadatas,
+                [],
+                $metadata3
             ]
         ];
     }

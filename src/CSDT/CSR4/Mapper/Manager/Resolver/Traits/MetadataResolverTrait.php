@@ -49,7 +49,6 @@ trait MetadataResolverTrait
         CSR3DTOInterface $dto,
         $mappedObject = null
     ) : ObjectMetadataInterface {
-
         $queue = new \SplPriorityQueue();
 
         foreach ($metadatas as $metadata) {
@@ -91,15 +90,19 @@ trait MetadataResolverTrait
      */
     private function getClassConfidence(string $className, $instance)
     {
-        if (hash_equals($className, get_class($instance))) {
+        if (hash_equals($className, gettype($instance))) {
             return ConfidenceInterface::DEDICATED_CONFIDENCE;
         }
 
-        if (in_array($className, class_parents(get_class($instance)))) {
+        if (is_object($instance) && hash_equals($className, get_class($instance))) {
+            return ConfidenceInterface::DEDICATED_CONFIDENCE;
+        }
+
+        if (is_object($instance) && in_array($className, class_parents(get_class($instance)))) {
             return ConfidenceInterface::HIGH_CONFIDENCE;
         }
 
-        if (in_array($className, class_implements(get_class($instance)))) {
+        if (is_object($instance) && in_array($className, class_implements(get_class($instance)))) {
             return ConfidenceInterface::MEDIUM_CONFIDENCE;
         }
 
