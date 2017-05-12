@@ -8,8 +8,16 @@
          bootstrap="./vendor/autoload.php"
 >
     <testsuites>
-        <testsuite name="Test Suite">
-            <directory>src/CSDT/CSR4/Tests</directory>
+        <testsuite name="unitary">
+            <directory>src/CSDT/CSR4/Tests/DataTransformer</directory>
+            <directory>src/CSDT/CSR4/Tests/Mapper</directory>
+            <directory>src/CSDT/CSR4/Tests/Metadata</directory>
+        </testsuite>
+    </testsuites>
+    
+    <testsuites>
+        <testsuite name="functionnal">
+            <directory>src/CSDT/CSR4/Tests/Fonctionnal</directory>
         </testsuite>
     </testsuites>
 

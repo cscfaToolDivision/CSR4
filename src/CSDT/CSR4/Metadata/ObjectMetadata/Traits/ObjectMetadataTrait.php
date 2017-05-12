@@ -239,17 +239,21 @@ trait ObjectMetadataTrait
      */
     private function filterPropertiesByTarget(string $targetName)
     {
-
         $filter = new MappedPropertyFilter($targetName);
 
         $iterator = new \CallbackFilterIterator(
             $this,
             [
-             $filter,
-             MappedPropertyFilter::FILTER_METHOD,
+                $filter,
+                MappedPropertyFilter::FILTER_METHOD,
             ]
         );
 
-        return iterator_to_array($iterator);
+        $results = [];
+        foreach ($iterator as $value) {
+            $results[] = $value;
+        }
+
+        return $results;
     }
 }

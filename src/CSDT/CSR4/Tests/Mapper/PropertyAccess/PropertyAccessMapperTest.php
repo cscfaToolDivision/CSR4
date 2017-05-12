@@ -433,7 +433,8 @@ class PropertyAccessMapperTest extends TestCase
         $expectedResult,
         array $groups = []
     ) {
-        $this->assertNull($this->instance->mapToObject($metadata, $dto, $mappedObject, $groups));
+        $result = $this->instance->mapToObject($metadata, $dto, $mappedObject, $groups);
+        $this->assertSame($mappedObject, $result);
 
         $this->assertEquals($expectedResult, $mappedObject);
     }

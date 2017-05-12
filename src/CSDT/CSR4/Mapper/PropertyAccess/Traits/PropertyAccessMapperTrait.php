@@ -49,7 +49,7 @@ trait PropertyAccessMapperTrait
      * @param mixed                   $mappedObject The object to map to
      * @param array                   $group        The array of group to map
      *
-     * @return void
+     * @return mixed
      */
     public function mapToObject(
         ObjectMetadataInterface $metadata,
@@ -85,6 +85,8 @@ trait PropertyAccessMapperTrait
                 )
             );
         }
+
+        return $mappedObject;
     }
 
     /**
@@ -287,9 +289,7 @@ trait PropertyAccessMapperTrait
      */
     private function getPropertyTransformerCallable($transformer, string $method)
     {
-        if ($this instanceof TransformerResolverAwareInterface
-            && !empty($transformer)
-        ) {
+        if ($this instanceof TransformerResolverAwareInterface && !empty($transformer)) {
             return [
                     $this->getTransformerResolver()->resolve($transformer),
                     $method,
