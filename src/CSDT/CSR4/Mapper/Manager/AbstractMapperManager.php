@@ -16,11 +16,10 @@
 namespace CSDT\CSR4\Mapper\Manager;
 
 use CSDT\CSR4\Mapper\Manager\MapperManagerInterface;
-use CSDT\CSR4\Mapper\Manager\Resolver\MetadataResolverInterface;
 use CSDT\CSR4\Mapper\Manager\Resolver\FactoryResolverInterface;
 use CSDT\CSR4\Mapper\Manager\Resolver\MapperResolverInterface;
+use CSDT\CSR4\Mapper\Manager\Resolver\MetadataResolverInterface;
 use CSDT\CSR4\Mapper\Manager\Traits\MapperManagerTrait;
-use CSDT\CSR4\DataTransformer\Traits\TransformerResolverAwareTrait;
 
 /**
  * AbstractMapperManager.php

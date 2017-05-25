@@ -15,16 +15,15 @@
  */
 namespace CSDT\CSR4\Tests\Metadata\Loader\Parser\php;
 
-use PHPUnit\Framework\TestCase;
-use CSDT\CSR4\Metadata\Loader\Parser\php\PhpMetadataParser;
 use CSDT\CSR4\Metadata\Loader\Parser\php\Factory\ResolverFactory;
+use CSDT\CSR4\Metadata\Loader\Parser\php\PhpMetadataParser;
 use CSDT\CSR4\Metadata\Loader\Parser\php\Validator\ObjectOptionValidator;
-use CSDT\CSR4\Metadata\Loader\Parser\php\Validator\PropertyOptionValidator;
 use CSDT\CSR4\Metadata\Loader\Parser\UnsupportedMetadataException;
-use CSDT\CSR4\Metadata\ObjectMetadata\ObjectMetadata;
 use CSDT\CSR4\Metadata\ObjectMetadata\Abstracts\AbstractObjectMetadata;
-use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadata;
+use CSDT\CSR4\Metadata\ObjectMetadata\ObjectMetadata;
 use CSDT\CSR4\Metadata\PropertyMetadata\Abstracts\AbstractObjectPropertyMetadata;
+use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadata;
+use PHPUnit\Framework\TestCase;
 
 /**
  * ObjectOptionValidatorTest.php

@@ -15,15 +15,14 @@
  */
 namespace CSDT\CSR4\Tests\Fonctionnal;
 
-use PHPUnit\Framework\TestCase;
-use CSDT\CSR4\Metadata\Loader\Parser\php\PhpMetadataParser;
-use CSDT\CSR4\Metadata\Loader\Parser\php\Validator\PropertyOptionValidator;
-use CSDT\CSR4\Metadata\Loader\Parser\php\Validator\ObjectOptionValidator;
-use CSDT\CSR4\Metadata\Loader\Parser\php\Factory\ResolverFactory;
 use CSDT\CSR3\CSR3GenericDTO;
 use CSDT\CSR4\Mapper\PropertyAccess\PropertyAccessMapper;
-use CSDT\CSR4\Metadata\ObjectMetadata\ObjectMetadata;
+use CSDT\CSR4\Metadata\Loader\Parser\php\Factory\ResolverFactory;
+use CSDT\CSR4\Metadata\Loader\Parser\php\PhpMetadataParser;
+use CSDT\CSR4\Metadata\Loader\Parser\php\Validator\ObjectOptionValidator;
+use CSDT\CSR4\Metadata\Loader\Parser\php\Validator\PropertyOptionValidator;
 use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadata;
+use PHPUnit\Framework\TestCase;
 
 /**
  * MetadataTest.php

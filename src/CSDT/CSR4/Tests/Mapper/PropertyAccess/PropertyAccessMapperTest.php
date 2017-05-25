@@ -15,18 +15,17 @@
  */
 namespace CSDT\CSR4\Tests\Mapper\PropertyAccess;
 
-use PHPUnit\Framework\TestCase;
-use CSDT\CSR4\Mapper\PropertyAccess\PropertyAccessMapper;
-use CSDT\CSR4\ConfidenceInterface;
-use CSDT\CSR4\Metadata\ObjectMetadata\ObjectMetadataInterface;
 use CSDT\CSR3\Interfaces\CSR3DTOInterface;
-use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface;
-use CSDT\CSR4\Mapper\MappingException;
-use CSDT\CSR4\Tests\Mapper\PropertyAccess\Misc\MiscMappedObject;
-use CSDT\CSR4\DataTransformer\TransformerResolverInterface;
+use CSDT\CSR4\ConfidenceInterface;
 use CSDT\CSR4\DataTransformer\TransformerInterface;
+use CSDT\CSR4\DataTransformer\TransformerResolverInterface;
+use CSDT\CSR4\Mapper\MappingException;
+use CSDT\CSR4\Mapper\PropertyAccess\PropertyAccessMapper;
+use CSDT\CSR4\Metadata\ObjectMetadata\ObjectMetadataInterface;
+use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadataInterface;
+use CSDT\CSR4\Tests\Mapper\PropertyAccess\Misc\MiscMappedObject;
 use CSDT\CSR4\Tests\Mapper\PropertyAccess\Misc\NoTransformerMapper;
-use CSDT\CSR4\Mapper\UnsupportedMappedPropertyException;
+use PHPUnit\Framework\TestCase;
 
 /**
  * PropertyAccessMapperTest.php
