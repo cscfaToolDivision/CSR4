@@ -38,6 +38,13 @@ use CSDT\CSR4\Metadata\PropertyMetadata\ObjectPropertyMetadata;
  */
 class MetadataTest extends TestCase
 {
+    /**
+     * Test metadata
+     *
+     * This method validate the metadata parsing logic
+     *
+     * @return void
+     */
     public function testMetadata()
     {
         $resolverFactory = new ResolverFactory();
@@ -65,9 +72,6 @@ class MetadataTest extends TestCase
             ]
         );
 
-        /**
-         * @var ObjectMetadata $metadata
-         */
         $metadata = $metadatas[0];
 
         $propMeta = $metadata->getByMappedProperty('prop2');
